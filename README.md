@@ -37,10 +37,7 @@ Initial evaluation results reported in the paper can be found [here](Documents/Q
 
 To reproduces the results, follow the steps in the [README](QIK_Evaluation/README.md).
 
-If you would need assistance in setting up the system or if you have any other concerns, feel free to reach out to.
-
-## Acknowledgements
-This work was supported by the National Science Foundation under Grant No. 1747751. ([NSF IUCRC Center for Big Learning](http://nsfcbl.org))
+If you would need assistance in setting up the system or if you have any other concerns, feel free to email us Arun Zachariah (`azachariah@missouri.edu`) and Praveen Rao (`praveen.rao@missouri.edu`).
 
 ## To cite using BibTeX
 If you use the code for your research, please cite as below:
@@ -55,3 +52,6 @@ year = {2020}
 location = {Dublin, Ireland}
 }
 ```
+
+## Acknowledgements
+This work was supported by the National Science Foundation under Grant No. 1747751. ([NSF IUCRC Center for Big Learning](http://nsfcbl.org))
