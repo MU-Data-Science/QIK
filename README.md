@@ -1,8 +1,8 @@
 # QIK
-**Q**uerying **I**mages Using Contextual **K**nowledge is a large-scale image retrieval system for complex everyday scenes. It combines advances in deep learning and natural language processing in a novel way to capture the relationships between objects in everyday scenes. It uses XML and XPath to construct queries for images and 
+**Q**uerying **I**mages Using Contextual **K**nowledge is a large-scale image retrieval system for complex everyday scenes. It combines advances in deep learning and natural language processing in a novel way to capture the relationships between objects in everyday scenes. It uses XML to represent tree representations of captions (e.g., parse tree) and stores and indexes them in an XML database. Given a query image, it constructs an XPath query based on the image's caption and identifies a set of candidate matches. For ranking the candidates, it uses the tree edit distance between parse/dependency trees.
 
 # Publications
-Arun Zachariah, Mohamed Gharibi, and Praveen Rao - QIK: A System for Large-Scale Image Retrieval on Everyday Scenes With Common Objects. In ACM International Conference on Multimedia Retrieval (ICMR 2020), 9 pages, Dublin, Ireland. (to appear)
+Arun Zachariah, Mohamed Gharibi, and Praveen Rao - "QIK: A System for Large-Scale Image Retrieval on Everyday Scenes With Common Objects." In ACM International Conference on Multimedia Retrieval (ICMR 2020), 9 pages, Dublin, Ireland. (to appear)
 
 
 ## System Setup
