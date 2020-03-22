@@ -1,5 +1,5 @@
 tensorflow==1.14
-Pillow==6.1
+Pillow==6.2.0
 scikit-image==0.15.0
 tensorflow_hub
 urllib3
