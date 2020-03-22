@@ -1,0 +1,13 @@
+*__pycache__*
+BaseX/.basex
+*.DS_Store
+.idea/
+*.iml
+scripts/config_files/hosts.txt
+QIK_Evaluation/data/captions_2017.json
+QIK_Evaluation/data/instances_2017.json
+ML_Models/ShowAndTell/checkpoints/model.ckpt-5000000.data-00000-of-00001
+IndexEngine/build/
+IndexEngine/lib/stanford-corenlp-3.9.2-models.jar
+IndexEngine/lib/stanford-parser-3.9.2-models.jar
+IndexEngine/out/

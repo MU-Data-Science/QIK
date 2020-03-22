@@ -1,0 +1,42 @@
+body {
+  background-color: #D3EFF7;
+}
+
+.header {
+  margin-left: 45%;
+  font-size: 300%;
+}
+
+#submit {
+  margin-left: 35%;
+  font-size: 150%;
+  padding: 1% 10%;
+}
+
+input[type=text] {
+  width: 80%;
+  font-size: 150%;
+  padding: 1% 1%;
+  border: none;
+  margin-left: 10%;
+}
+
+.center {
+  margin: auto;
+  width: 100%;
+}
+
+table {
+  border: 15px solid transparent;
+}
+
+td, tr {
+  border: 15px solid transparent;
+  height: 10%;
+  width: 10%;
+}
+
+img {
+  height: 250px;
+  width: 250px;
+}

@@ -1,0 +1,10 @@
+DATA_DIR = 'data'
+DATA_TYPE = '2017'
+ANN_FILE = '{}/instances_{}.json'.format(DATA_DIR,DATA_TYPE)
+CAPTIONS_FILE = '{}/captions_{}.json'.format(DATA_DIR,DATA_TYPE)
+OUTPUT_PATH = 'Benchmak_Dataset'
+LOG_FILENAME = 'QIK_Eval.log'
+MIN_AREA = 0
+GROUND_TRUTH_META_DATA = 'data/Ground_Truth_Meta_Data.pkl'
+THREAD_COUNT = 10
+SENTENCE_ENCODER_MODULE_URL = "https://tfhub.dev/google/universal-sentence-encoder/2"

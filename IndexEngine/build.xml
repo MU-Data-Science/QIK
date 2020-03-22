@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<project name="IndexEngine" default="war">
+
+	<target name="clean">
+		<delete dir="build/" />
+		<delete dir="index/" />
+	</target>
+
+	<path id="compile.classpath">
+		<fileset dir="lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<target name="init">
+		<mkdir dir="build/classes"/>
+		<mkdir dir="build/war" />
+	</target>
+
+	<target name="compile" depends="clean, init" >
+		<javac destdir="build/classes" debug="true" srcdir="src">
+			<classpath refid="compile.classpath"/>
+		</javac>
+		<copy file="log4j2.properties" todir="build/classes"/>
+	</target>
+
+	<target name="war" depends="compile">
+		<war destfile="build/war/IndexEngine.war" needxmlfile="false">
+			<lib dir="lib"/>
+			<classes dir="build/classes"/>
+		</war>
+	</target>
+
+</project>

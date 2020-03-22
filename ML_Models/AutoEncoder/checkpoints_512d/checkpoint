@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/max/Desktop/AutoEncoder/checkpoints/model.h5"
+all_model_checkpoint_paths: "/home/max/Desktop/AutoEncoder/checkpoints/model.h5"

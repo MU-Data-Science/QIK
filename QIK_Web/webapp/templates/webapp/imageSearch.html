@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>QIK</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="{% static 'styles/home.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.js"> </script>
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="http://www.nsfcbl.org">
+            <img src="https://i2.wp.com/nsfcbl.org/wp-content/uploads/2016/11/cropped-cropped-small-logo-2.png?fit=512%2C512" style="width: 70px"></a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://github.com/raopr/QIK">Github</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+        <h1 class="text-uppercase mb-0">QIK</h1>
+        <hr class="star-light">
+
+        <div>
+            <form style="border-style: dashed; align-self: center; color: #313F51" method="post" enctype="multipart/form-data"></br>
+                {% csrf_token %}
+                <div class="form-group">
+                    <label id="image_search" style="align-self: center;">{{ form.imageFile }}</label>
+                    {{ field }}
+                </div>
+
+                <fieldset>
+                    <span style="font-size: 20px; color: white;">Select an Existing Image: &nbsp; &nbsp; &nbsp;</span>
+                    <select name="images" id="images">
+                        <option value="/mydata/apache-tomcat/webapps/QIK/image_1.png" data-class="avatar" data-style="background-image: url(http://localhost:8080/QIK/image_1.png);">Image 1</option>
+                        <option value="/mydata/apache-tomcat/webapps/QIK/image_2.png" data-class="avatar" data-style="background-image: url(http://localhost:8080/QIK/image_2.png);">Image 2</option>
+                        <option value="/mydata/apache-tomcat/webapps/QIK/image_3.png" data-class="avatar" data-style="background-image: url(http://localhost:8080/QIK/image_3.png);">Image 3</option>
+                        <option value="/mydata/apache-tomcat/webapps/QIK/image_4.png" data-class="avatar" data-style="background-image: url(http://localhost:8080/QIK/image_4.png);">Image 4</option>
+                        <option value="/mydata/apache-tomcat/webapps/QIK/image_5.png" data-class="avatar" data-style="background-image: url(http://localhost:8080/QIK/image_5.png);">Image 5</option>
+                    </select>
+                </fieldset></br>
+
+                <span style="font-size: 20px; color: white;">Ranking Scheme: &nbsp; &nbsp; &nbsp;</span>
+                {{ form.ranking_function }}</br> </br>
+
+                <button class="btn btn-xl btn-outline-light" type="submit" id="submit">Submit</button>
+                </br> </br>
+            </form>
+        </div>
+        </br>
+
+        <h2 class="font-weight-light mb-0">Please upload an image to start searching!</h2>
+    </div>
+</header>
+
+
+
+<!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">University of Missouri-Kansas City</h4>
+                <p class="lead mb-0">5100 Rockhill Rd
+                    <br>Kansas City, MO 64110</p>
+            </div>
+            <div class="col-md-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Around the Web</h4>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/UMKansasCity/">
+                            <i class="fab fa-fw fa-facebook-f"></i>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/UMKansasCity?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                            <i class="fab fa-fw fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/school/umkc/">
+                            <i class="fab fa-fw fa-linkedin-in"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4 class="text-uppercase mb-4">Big Data Lab</h4>
+                <p class="lead mb-0">Dr. Praveen Rao | Arun George | Mohamed Gharibi
+                    <!-- <a href="http://startbootstrap.com">Start Bootstrap</a>.</p> -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="copyright py-4 text-center text-white">
+    <div class="container">
+        <small>Copyright &copy; Your Website 2019</small>
+    </div>
+</div>
+<script src="{% static 'scripts/results.js' %}"></script>
+
+</body>
+
+</html>

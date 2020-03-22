@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>QIK</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/tabs_style.css' %}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="{% static 'scripts/results.js' %}"></script>
+    <link href="{% static 'styles/home.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.js"> </script>
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="http://www.nsfcbl.org">
+            <img src="https://i2.wp.com/nsfcbl.org/wp-content/uploads/2016/11/cropped-cropped-small-logo-2.png?fit=512%2C512" style="width: 70px"></a>
+        
+        <div id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8000/search/add_index">Index</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://github.com/raopr/QIK">Github</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container" style="position: relative; min-height: 100vh;">
+        <!-- <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt=""> -->
+        <h1 class="text-uppercase mb-0">QIK</h1>
+        <hr class="star-light">
+
+        <div >
+            <form style="border-style: dashed; align-self: center; color: #313F51" method="post" enctype="multipart/form-data"></br>
+                {% csrf_token %}
+                <div class="form-group">
+
+                    <table style="width: 100%">
+                        <tr>
+                            <th>
+                                <img class = "imgDiv" src="{{ imgSrc }}" alt="QIK Search Image" style="width: 100%; max-width: 300px; max-height: 350px">
+                            </th>
+                            <th>
+                                <label style="align-self: center;" onclick="cleanPage()">{{ form.imageFile }}</label>
+                                {{ field }}
+                                <br>
+                                <fieldset onclick="cleanPage()">
+                                    <span style="font-size: 20px; color: white;">Select an Existing Image: &nbsp; &nbsp; &nbsp;</span>
+                                    <select name="images" id="images">
+                                        <option value="/mydata/apache-tomcat/webapps/QIK/image_1.png" data-class="avatar" data-style="background-image: url(http://localhost:8080/QIK/image_1.png);">Image 1</option>
+                                        <option value="/mydata/apache-tomcat/webapps/QIK/image_2.png" data-class="avatar" data-style="background-image: url(http://localhost:8080/QIK/image_2.png);">Image 2</option>
+                                        <option value="/mydata/apache-tomcat/webapps/QIK/image_3.png" data-class="avatar" data-style="background-image: url(http://localhost:8080/QIK/image_3.png);">Image 3</option>
+                                        <option value="/mydata/apache-tomcat/webapps/QIK/image_4.png" data-class="avatar" data-style="background-image: url(http://localhost:8080/QIK/image_4.png);">Image 4</option>
+                                        <option value="/mydata/apache-tomcat/webapps/QIK/image_5.png" data-class="avatar" data-style="background-image: url(http://localhost:8080/QIK/image_5.png);">Image 5</option>
+                                    </select>
+                                </fieldset></br>
+
+
+                                <span style="font-size: 20px; color: white;">Ranking Scheme: &nbsp; &nbsp; &nbsp;</span>
+                                {{ form.ranking_function }}</br> </br>
+
+                                <button class="btn btn-xl btn-outline-light" type="submit" id="submit">Submit</button>
+                                </br> </br>
+                            </th>
+                        </tr>
+
+                    </table></div>
+            </form>
+        </div>
+
+        </table>
+        </br>
+
+        <div class="resultsDiv">
+
+            <button class="tablink" onclick="openPage('Home', this, '#C0C0C0')" id="defaultOpen">QIK</button>
+            <button class="tablink" onclick="openPage('Contact', this, '#C0C0C0')">CBIR1</button>
+            {% load filters %}
+
+            <div id="Home" class="tabcontent">
+                <table>
+                    <tr>
+                        {% for image in images %}
+                            {% with image|split as details %}
+                                <td>
+				    <!--<br> -->
+				    <!-- <div id = "feedback" style="display:inline"> -->
+					    <!-- <img id="up" src="{% static 'images/up.png' %}" width="10%" height="5%"><a>    </a> -->
+					    <!-- <img id="down" src="{% static 'images/down.png' %}" width="10%" height="5%"><a>    </a> -->
+				    <!-- </div> -->
+				    <!-- <br> -->
+				    <a herf="{{ details.link }}"><img id ="resultImage" src="{{ details.link }}" width="200" height="300"></a><br>{{details.caption}}</td>
+                                </td>
+                            {% endwith %}
+                            {% if forloop.counter|divisibleby:5 %}
+                                </tr>
+                                <tr>
+                            {% endif %}
+                        {% endfor %}
+                        </tr>
+                </table>
+            </div>
+
+            <div id="Contact" class="tabcontent">
+                <span style="color: #800000">CBIR1: Lucene Image Retrieval (LIRE)</span></br></br>
+                <table>
+                    <tr>
+                        {% for image in imagesLIRE %}
+                            <td><a herf="{{ image }}"><img src="{{ image }}" width="200" height="300"></a><br></td>
+                            {% if forloop.counter|divisibleby:5 %}
+                                </tr>
+                                <tr>
+                            {% endif %}
+                        {% endfor %}
+                        </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div class="copyright py-4 text-center text-white" style="padding-bottom: 0; bottom: 0; width: 100%;">
+    <div class="container">
+        <small>Copyright &copy; CBL-UMKC 2019</small>
+    </div>
+</div>
+<script src="{% static 'scripts/results.js' %}"></script>
+<script src="{% static 'js/tabs_style.js' %}"></script>
+
+</body>
+
+</html>
