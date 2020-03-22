@@ -40,7 +40,7 @@ To reproduces the results, follow the steps in the [README](QIK_Evaluation/READM
 If you would need assistance in setting up the system or if you have any other concerns, feel free to email: Arun Zachariah (`azachariah@mail.missouri.edu`) and Praveen Rao (`praveen.rao@missouri.edu`).
 
 ## To cite using BibTeX
-If you use the code for your research, please cite as below:
+If you use QIK's code for your research, please cite our publication as below:
 ```
 @InProceedings{QIK_2020_ICMR,
 author = {Zachariah, Arun and Gharibi, Mohamed and Rao, Praveen},
