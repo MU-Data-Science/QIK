@@ -1,5 +1,5 @@
 # QIK Evaluation
-We compute the results using MAP.
+We compare image retrieval performance of QIK and its competitors in terms of mAP and retrieval time.
 
 ## Environment Setup
 * QIK can be deployed using `scripts/deploy_scripts/init.sh`
@@ -33,15 +33,15 @@ We compute the results using MAP.
         
         `python comb_pre_eval_res.py` 
         
-* We have pre-computed query results for all the images extracted from an random subset of 15k images present at `data/MSCOCO_Subset_2`.
+    * We have pre-computed query results for all the images extracted from an random subset of 15k images present at `data/MSCOCO_Subset_2`.
 
-To generate the MAP results:
-```
-python post_eval.py -threshold <THRESHOLD_SCORE> -categories <CATEGROY_COMBINATION_FILE> -preresults <PRE-COMPUTED_RESULTS_FILE> -outfile <OUTPUT_FILE>
-```
+* To get the mAP results:
+    ```
+    python post_eval.py -threshold <THRESHOLD_SCORE> -categories <CATEGROY_COMBINATION_FILE> -preresults <PRE-COMPUTED_RESULTS_FILE> -outfile <OUTPUT_FILE>
+    ```
 
-Eg: To compute the results for the 2 category combination with the threshold 0.6.
-```
-python post_eval.py -threshold .6 -categories data/2_cat_comb.txt -preresults data/MSCOCO_Subset_2/MSCOCO_Subset_2_Results.pkl -outfile data/QIK_Output_Combined.txt
-```
+    Eg: To compute the results for the 2 category combination with the threshold 0.6.
+    ```
+    python post_eval.py -threshold .6 -categories data/2_cat_comb.txt -preresults data/MSCOCO_Subset_2/MSCOCO_Subset_2_Results.pkl -outfile data/QIK_Output_Combined.txt
+    ```
 
