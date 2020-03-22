@@ -53,5 +53,5 @@ location = {Dublin, Ireland}
 }
 ```
 
-## Acknowledgements
+## Acknowledgments
 This work was supported by the National Science Foundation under Grant No. 1747751. ([NSF IUCRC Center for Big Learning](http://nsfcbl.org))
