@@ -1,5 +1,5 @@
 # QIK
-**Q**uerying **I**mages Using **C**ontextual **K**nowledge is a large-scale image retrieval system for complex everyday scenes. It combines advances in deep learning and natural language processing in a novel fashion to capture the relationships between objects in an everyday scenes.
+**Q**uerying **I**mages Using Contextual **K**nowledge is a large-scale image retrieval system for complex everyday scenes. It combines advances in deep learning and natural language processing in a novel fashion to capture the relationships between objects in an everyday scenes.
 
 ## System Setup
 
