@@ -47,7 +47,7 @@ done
 
 # Installing Conda.
 cd $HOME && wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
-bash Anaconda3-2019.03-Linux-x86_64.sh -b -p /$HOME/anaconda3
+bash Anaconda3-2019.03-Linux-x86_64.sh -b -p $HOME/anaconda3
 export PATH=$HOME/anaconda3/bin:$PATH
 . $HOME/.bashrc
 echo 'export PATH='$HOME'/anaconda3/bin:$PATH' >> /users/$USER/.profile
@@ -106,6 +106,7 @@ wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_mail_umkc_edu/E
 bash $QIK_HOME/scripts/deploy_scripts/change_ip.sh
 
 # Setting up BaseX
+cd $QIK_HOME && wget http://files.basex.org/releases/9.2/BaseX92.zip && unzip BaseX92.zip && mv basex BaseX
 bash $QIK_HOME/BaseX/bin/basexserver -S
 bash $QIK_HOME/BaseX/bin/basex -c "create db QIK"
 
@@ -122,6 +123,9 @@ echo 'export SOLR_ULIMIT_CHECKS=false' >> /users/$USER/.profile
 
 # Creating QIK core.
 ./solr-8.0.0/bin/solr create -c $QIK_CORE_NAME
+
+# Installing APTED
+cd $QIK_HOME && git clone https://github.com/JoaoFelipe/apted.git APTED
 
 # Building and deploying the indexing engine.
 bash $QIK_HOME/scripts/deploy_scripts/deploy_index_engine.sh
@@ -145,6 +149,7 @@ rm -rvf $HOME/bazel-0.25.3-installer-linux-x86_64.sh
 rm -rvf $HOME/jdk-8u131-linux-x64.tar.gz
 rm -rvf $HOME/apache-tomcat-9.0.20.zip
 rm -rvf $HOME/solr-8.0.0.tgz
+rm -rvf $QIK_HOME/BaseX92.zip
 
 # Executing profile.
 echo '. '$HOME'/.bashrc' >> /users/$USER/.profile

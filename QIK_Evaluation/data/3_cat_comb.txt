@@ -1,0 +1,50 @@
+boat,bench,skateboard
+fork,spoon,potted plant
+bench,sports ball,baseball glove
+train,tie,suitcase
+fork,spoon,chair
+person,suitcase,cell phone
+person,tie,couch
+couch,tv,teddy bear
+handbag,tv,laptop
+knife,spoon,dining table
+dog,chair,couch
+handbag,baseball bat,chair
+truck,handbag,baseball bat
+person,wine glass,chair
+couch,potted plant,cell phone
+backpack,sports ball,baseball bat
+bottle,cup,tv
+cup,tv,mouse
+tv,laptop,book
+couch,potted plant,book
+cup,bowl,book
+chair,tv,vase
+dog,couch,book
+person,horse,tie
+dining table,clock,vase
+person,backpack,bottle
+bus,bench,backpack
+cup,bowl,dining table
+person,umbrella,suitcase
+backpack,umbrella,handbag
+person,pizza,dining table
+tv,mouse,teddy bear
+car,knife,chair
+person,umbrella,dining table
+traffic light,handbag,potted plant
+person,wine glass,dining table
+handbag,tie,suitcase
+bus,bench,suitcase
+handbag,couch,dining table
+person,backpack,tennis racket
+suitcase,tv,vase
+person,fork,knife
+wine glass,carrot,dining table
+person,handbag,knife
+traffic light,backpack,tie
+handbag,chair,remote
+car,chair,clock
+bottle,remote,vase
+person,car,suitcase
+person,car,book

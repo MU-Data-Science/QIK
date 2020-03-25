@@ -12,6 +12,7 @@ We compare image retrieval performance of QIK and its competitors in terms of mA
     
 ## To Reproduce the Results.
 * To reproduce the results from scratch.
+    * Download the [dataset](https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_mail_umkc_edu/ESYcm3NFPoBHr0b4owabdikB6dBcWx7zMsJD_G2oww725Q?e=z8fVGo).
     * Construct the index.
         * QIK: [README](../README.md)
         * DIR: [README](../ML_Models/DeepImageRetrieval/README.md)

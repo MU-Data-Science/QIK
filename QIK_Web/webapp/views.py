@@ -124,7 +124,7 @@ def text_search(request):
             ## QIK Search -- End ##
 
             # Returning the fetched images.
-            return render(request, 'webapp/results.html', {'form': form, 'images': sortedCaptionRanksDict, 'imagesAutoEnc': [], 'imagesLIRE': [], 'imgSrc': ""})
+            return render(request, 'webapp/results.html', {'form': form, 'images': sortedCaptionRanksDict})
 
     else:
     	# Initial loading
@@ -170,7 +170,7 @@ def image_search(request):
             ## QIK Search -- End ##
 
             # Returning the fetched images.
-            return render(request, 'webapp/res.html', {'form': form, 'images': sortedCaptionRanksDict})
+            return render(request, 'webapp/res.html', {'form': form, 'images': sortedCaptionRanksDict, 'imgSrc': constants.QUERY_IMAGE_PATH.replace(constants.QIK_WEBAPP_PATH, constants.QIK_TOMCAT_URL)})
 
     form = ImageSearchForm();
     return render(request, 'webapp/imageSearch.html', {'form':form})

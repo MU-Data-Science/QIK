@@ -1,0 +1,50 @@
+bicycle,dining table
+tv,remote
+backpack,snowboard
+handbag,suitcase
+person,tennis racket
+keyboard,book
+cell phone,book
+backpack,dining table
+cup,vase
+truck,bottle
+bottle,book
+car,clock
+bowl,potted plant
+truck,bench
+sports ball,baseball glove
+knife,pizza
+fork,carrot
+truck,backpack
+bench,handbag
+couch,potted plant
+boat,kite
+umbrella,bowl
+suitcase,remote
+boat,kite
+umbrella,bowl
+person,chair
+knife,sandwich
+wine glass,sandwich
+bus,bench
+cup,potted plant
+car,stop sign
+wine glass,microwave
+bench,tennis racket
+wine glass,sandwich
+spoon,sandwich
+suitcase,dining table
+snowboard,surfboard
+bowl,book
+train,tie
+chair,keyboard
+sandwich,dining table
+couch,dining table
+umbrella,spoon
+car,backpack
+potted plant,clock
+bowl,refrigerator
+couch,mouse
+chair,oven
+tv,laptop
+baseball bat,baseball glove

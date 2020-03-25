@@ -22,7 +22,7 @@ cd scripts/deploy_scripts && . init.sh --home /mydata --qik /mydata/QIK --core Q
 cd <QIK_HOME>/QIK_Web && python manage.py runserver <IP>:8000
 ```
 
-The UI can be accessed at http://<IP>:8000/search/image_search
+The UI can be accessed at http://\<IP\>:8000/search/image_search
 
 ## To construct the index.
 List of images can be added to `MetaDataGenerator/images.txt` or the directory containing the images can be added to `MetaDataGenerator/constants.py`
@@ -37,7 +37,7 @@ Initial evaluation results reported in the paper can be found [here](Documents/Q
 
 To reproduces the results, follow the steps in the [README](QIK_Evaluation/README.md).
 
-If you would need assistance in setting up the system or if you have any other concerns, feel free to email: Arun Zachariah (`azachariah@mail.missouri.edu`) and Praveen Rao (`praveen.rao@missouri.edu`).
+The scripts were tested on Ubuntu 16.04. If you would need assistance in setting up the system or if you have any other concerns, feel free to email [Arun Zachariah](mailto:azachariah@mail.missouri.edu) and [Praveen Rao](mailto:praveen.rao@missouri.edu).
 
 ## To cite using BibTeX
 If you use QIK's code for your research, please cite our publication as below:

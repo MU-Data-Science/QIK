@@ -11,7 +11,7 @@ LIRE_QUERY="http://localhost:8080/IndexEngine/queryLire?query="
 THREAD_COUNT = 10
 SOLR_QUERY_URL = "http://localhost:8080/IndexEngine/query?query="
 IS_TF_RANKING_ENABLED = False;
-TOMCAT_OLD_IP_ADDR = "http://localhost:8080"
+TOMCAT_OLD_IP_ADDR = "http://128.105.144.88:8080"
 IMAGE_DATA_DIR= "/QIK_Image_Data/"
 LIRE_INDEX_URL="http://localhost:8080/IndexEngine/indexLire?dir="
 INDEX_ENGINE_URL = "http://localhost:8080/IndexEngine/postData?data="
