@@ -2,7 +2,7 @@
 **Q**uerying **I**mages Using Contextual **K**nowledge is a large-scale image retrieval system for complex everyday scenes. It combines advances in deep learning and natural language processing in a novel way to capture the relationships between objects in everyday scenes. It uses XML to represent tree representations of captions (e.g., parse tree) and stores and indexes them in an XML database. Given a query image, it constructs an XPath query based on the image's caption and identifies a set of candidate matches by querying the XML database. For ranking the candidates, it uses the tree edit distance between the parse tree (or dependency tree) of query caption and that of a candidate's caption. For more details, see the below publications.
 
 ## Publications
-Arun Zachariah, Mohamed Gharibi, and Praveen Rao - **QIK: A System for Large-Scale Image Retrieval on Everyday Scenes With Common Objects.** In ACM International Conference on Multimedia Retrieval (ICMR 2020), 10 pages, Dublin, Ireland. [[PDF]](https://drive.google.com/file/d/1hcqZRtRFHK2eC39D8p2j-pCbl2CgVsvl/view) (to appear)
+Arun Zachariah, Mohamed Gharibi, and Praveen Rao - **QIK: A System for Large-Scale Image Retrieval on Everyday Scenes With Common Objects.** In ACM International Conference on Multimedia Retrieval (ICMR 2020), pages 126-135, Dublin, Ireland. [[PDF]](https://drive.google.com/file/d/1hcqZRtRFHK2eC39D8p2j-pCbl2CgVsvl/view) [DOI](https://doi.org/10.1145/3372278.3390682)
 
 
 ## System Setup
