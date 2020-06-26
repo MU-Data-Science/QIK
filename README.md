@@ -42,16 +42,26 @@ The scripts were tested on Ubuntu 16.04. If you would need assistance in setting
 ## To cite using BibTeX
 If you use QIK's code for your research, please cite our publication as below:
 ```
-@InProceedings{QIK_2020_ICMR,
+@inproceedings{QIK_ICMR_2020,
 author = {Zachariah, Arun and Gharibi, Mohamed and Rao, Praveen},
 title = {QIK: A System for Large-Scale Image Retrieval on Everyday Scenes With Common Objects},
+year = {2020},
 publisher = {Association for Computing Machinery},
-booktitle = {Proceedings of the 2020 on International Conference on Multimedia Retrieval}, 
-month = {June},
-year = {2020}
-location = {Dublin, Ireland}
+address = {New York, NY, USA},
+doi = {10.1145/3372278.3390682},
+booktitle = {Proceedings of the 2020 International Conference on Multimedia Retrieval},
+pages = {126–135},
+numpages = {10},
+location = {Dublin, Ireland},
+series = {ICMR ’20}
 }
 ```
+
+## Contributors
+
+***Faculty:*** Praveen Rao (PI)
+
+***PhD Students:*** Arun Zachariah, Mohamed Gharibi
 
 ## Acknowledgments
 This work was supported by the National Science Foundation under Grant No. 1747751. ([NSF IUCRC Center for Big Learning](http://nsfcbl.org))
