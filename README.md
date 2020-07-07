@@ -37,7 +37,7 @@ Initial evaluation results reported in the paper can be found [here](Documents/Q
 
 To reproduces the results, follow the steps in the [README](QIK_Evaluation/README.md).
 
-The scripts were tested on Ubuntu 16.04. If you would need assistance in setting up the system or if you have any other concerns, feel free to email [Arun Zachariah](mailto:azachariah@mail.missouri.edu) and [Praveen Rao](mailto:praveen.rao@missouri.edu).
+The scripts were tested on Ubuntu 16.04. If you would need assistance in setting up the system or if you have any other concerns, feel free to email [Arun Zachariah](mailto:azachariah@mail.missouri.edu) and [Praveen Rao](mailto:praveen.rao@missouri.edu). You can also report any issues [here](https://github.com/MU-Data-Science/QIK/issues).
 
 ## To cite using BibTeX
 If you use QIK's code for your research, please cite our publication as below:
