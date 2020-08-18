@@ -1,16 +1,16 @@
 #!/bin/bash
-# usage: init.sh  [--home Home] [--qik QIK_Home] [--core QIK_Core] [-h | --help] 
+# usage: init.sh  [--home Home] [--qik QIK_Home] [-h | --help]
 
 # Constants.
-HOME=/mydata
-QIK_HOME=$HOME/QIK
+HOME=${HOME}
+QIK_HOME=${PWD}
 QIK_CORE_NAME=QIK
-USER="arung"
+USER=${USER}
 
 # Usage.
 usage()
 {
-    echo "usage: init.sh [--user User] [--home Home] [--qik QIK_Home] [--core QIK_Core] [-h | --help]"
+    echo "usage: init.sh [--user User] [--home Home] [--qik QIK_Home] [-h | --help]"
 }
 
 # Read input parameters.
@@ -24,15 +24,10 @@ while [ "$1" != "" ]; do
         --home)
         	shift
         	HOME=$1
-        	QIK_HOME=$1/QIK
         	;;
         --qik)
         	shift
         	QIK_HOME=$1
-        	;;
-        --core)
-        	shift
-        	QIK_CORE_NAME=$1
         	;;
         -h | --help )           
         	usage
@@ -98,9 +93,9 @@ echo 'export PATH=$PATH:'$HOME'/bin' >> /users/$USER/.profile
 . /users/$USER/.profile
 
 # Downloading Large Files.
-wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_mail_umkc_edu/EQ8OVRhr8kdAoL-n52IX-sEBEsUhOrK5Q_C_SkqTUAthUQ?download=1 -O $QIK_HOME/ML_Models/ShowAndTell/checkpoints/model.ckpt-5000000.data-00000-of-00001
-wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_mail_umkc_edu/EVA9jI60C4xAoaxgmnt4s2EB4evfyx4PFs6X6Z4lzkii2Q?download=1 -O $QIK_HOME/IndexEngine/lib/stanford-corenlp-3.9.2-models.jar
-wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_mail_umkc_edu/ERWi9gvm7epHpogQIhr8d8EB0-krRTswMoo6LjKpgPuDQg?download=1 -O $QIK_HOME/IndexEngine/lib/stanford-parser-3.9.2-models.jar
+wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/EQ8OVRhr8kdAoL-n52IX-sEBEsUhOrK5Q_C_SkqTUAthUQ?download=1 -O $QIK_HOME/ML_Models/ShowAndTell/checkpoints/model.ckpt-5000000.data-00000-of-00001
+wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/EVA9jI60C4xAoaxgmnt4s2EB4evfyx4PFs6X6Z4lzkii2Q?download=1 -O $QIK_HOME/IndexEngine/lib/stanford-corenlp-3.9.2-models.jar
+wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/ERWi9gvm7epHpogQIhr8d8EB0-krRTswMoo6LjKpgPuDQg?download=1 -O $QIK_HOME/IndexEngine/lib/stanford-parser-3.9.2-models.jar
 
 # Changing the IP address from localhost.
 bash $QIK_HOME/scripts/deploy_scripts/change_ip.sh
@@ -130,9 +125,6 @@ cd $QIK_HOME && git clone https://github.com/JoaoFelipe/apted.git APTED
 # Building and deploying the indexing engine.
 bash $QIK_HOME/scripts/deploy_scripts/deploy_index_engine.sh
 
-# Directory to store FAISS Index.
-mkdir $HOME/KNN_Index
-
 # Directory to save the query image.
 mkdir $HOME/apache-tomcat/webapps/QIK
 
@@ -141,7 +133,6 @@ export CLASSPATH=$QIK_HOME/IndexEngine/lib
 echo 'export CLASSPATH=$QIK_HOME/IndexEngine/lib' >> /users/$USER/.profile
 
 # Installing Python dependencies.
-conda install -y faiss-cpu -c pytorch
 pip install -r $QIK_HOME/scripts/deploy_scripts/requirements.txt
 
 # Clean up unwanted files.
