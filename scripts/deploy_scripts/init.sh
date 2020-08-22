@@ -14,7 +14,6 @@ usage()
 }
 
 # Read input parameters.
-if [ "$1" == "" ]; then usage; exit 1; fi
 while [ "$1" != "" ]; do
     case $1 in
     	--user)
