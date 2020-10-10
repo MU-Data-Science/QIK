@@ -43,7 +43,7 @@ done
 cd $HOME && wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 bash Anaconda3-2019.03-Linux-x86_64.sh -b -p $HOME/anaconda3
 export PATH=$HOME/anaconda3/bin:$PATH
-. $HOME/.bashrc
+. /users/$USER/.bashrc
 echo 'export PATH='$HOME'/anaconda3/bin:$PATH' >> /users/$USER/.profile
 conda init
 conda create -y --name qik_env python=3.6
