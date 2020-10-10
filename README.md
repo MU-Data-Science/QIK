@@ -10,11 +10,11 @@ Arun Zachariah, Mohamed Gharibi, and Praveen Rao - **QIK: A System for Large-Sca
 Execute `scripts/deploy_scripts/init.sh`
 
 ```
-. init.sh [--home Home] [--qik QIK_Home] [--core QIK_Core] [-h | --help]
+. init.sh [--home Home] [--qik QIK_Home] [-h | --help]
 ```
 Eg:
 ```
-cd scripts/deploy_scripts && . init.sh --home /mydata --qik /mydata/QIK --core QIK_Core
+cd scripts/deploy_scripts && . init.sh --home /mydata --qik /mydata/QIK
 ```
 
 ## To start the web engine.
