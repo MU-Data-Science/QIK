@@ -5,6 +5,9 @@
 Arun Zachariah, Mohamed Gharibi, and Praveen Rao - **QIK: A System for Large-Scale Image Retrieval on Everyday Scenes With Common Objects.** In ACM International Conference on Multimedia Retrieval (ICMR 2020), pages 126-135, Dublin, Ireland. [[PDF]](https://drive.google.com/file/d/1hcqZRtRFHK2eC39D8p2j-pCbl2CgVsvl/view) [[DOI]](https://doi.org/10.1145/3372278.3390682)
 
 
+## Errata
+We made an inadvertent error in computing the mean average precision (MAP) values reported in the ACM ICMR 2020 paper. Our sincere apologies for this human error. The correct numbers are report [here](https://github.com/MU-Data-Science/QIK/tree/master/QIK_Evaluation#results).
+
 ## System Setup
 
 Execute `scripts/deploy_scripts/init.sh`
