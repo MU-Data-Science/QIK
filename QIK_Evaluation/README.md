@@ -1,5 +1,5 @@
-# Reproduce Results
-Here, we compare image retrieval performance of QIK and its competitors in terms of mAP and retrieval time. We also describe the evaluation details and steps to reproduce the results. 
+# Evaluation
+Here, we describe the steps to evaliate and compare image retrieval performance of QIK and its competitors in terms of mAP. 
 
 ## Setup
 ### Pre-requisites:
