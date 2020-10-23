@@ -6,7 +6,7 @@ Arun Zachariah, Mohamed Gharibi, and Praveen Rao - **QIK: A System for Large-Sca
 
 
 ## Errata
-We made an inadvertent error in computing the mean average precision (MAP) values reported in the ACM ICMR 2020 paper. Our sincere apologies for this human error. The correct numbers are report [here](https://github.com/MU-Data-Science/QIK/tree/master/QIK_Evaluation#results).
+We made an inadvertent error in computing the mean average precision (MAP) values reported in the ACM ICMR 2020 paper. Our sincere apologies for this human error. The correct numbers are reported [here](https://github.com/MU-Data-Science/QIK/tree/master/QIK_Evaluation#results).
 
 ## System Setup
 
