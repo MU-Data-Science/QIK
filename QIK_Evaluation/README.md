@@ -72,32 +72,32 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
     <table>
         <tr>
             <td rowspan="2"></td>
-            <td align="center" colspan="4">τ=0.6</td>
-            <td align="center" colspan="4">τ=0.7</td>
+            <td align="center" colspan="4"><b>τ=0.6</b></td>
+            <td align="center" colspan="4"><b>τ=0.7</b></td>
         </tr>
         <tr>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
         </tr>
         <tr>
-            <td align="center">QIKc</td>
-            <td align="center">0.97</td>
-            <td align="center">0.96</td>
-            <td align="center">0.96</td>
-            <td align="center">0.96</td>
-            <td align="center">0.88</td>
-            <td align="center">0.87</td>
-            <td align="center">0.87</td>
-            <td align="center">0.87</td>
+            <td align="center"><b>QIKc</b></td>
+            <td align="center"><b>0.97</b></td>
+            <td align="center"><b>0.96</b></td>
+            <td align="center"><b>0.96</b></td>
+            <td align="center"><b>0.96</b></td>
+            <td align="center"><b>0.88</b></td>
+            <td align="center"><b>0.87</b></td>
+            <td align="center"><b>0.87</b></td>
+            <td align="center"><b>0.87</b></td>
         </tr>
         <tr>
-            <td align="center">QIKo (0.9)</td>
+            <td align="center"><b>QIKo (0.9)</b></td>
             <td align="center">0.91</td>
             <td align="center">0.91</td>
             <td align="center">0.9</td>
@@ -108,7 +108,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.71</td>
         </tr>
         <tr>
-            <td align="center">QIKo (0.8)</td>
+            <td align="center"><b>QIKo (0.8)</b></td>
             <td align="center">0.85</td>
             <td align="center">0.86</td>
             <td align="center">0.85</td>
@@ -124,32 +124,32 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
     <table>
         <tr>
             <td rowspan="2"></td>
-            <td align="center" colspan="4">τ=0.6</td>
-            <td align="center" colspan="4">τ=0.7</td>
+            <td align="center" colspan="4"><b>τ=0.6</b></td>
+            <td align="center" colspan="4"><b>τ=0.7</b></td>
         </tr>
         <tr>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
         </tr>
         <tr>
-            <td align="center">QIKc</td>
-            <td align="center">0.98</td>
-            <td align="center">0.97</td>
-            <td align="center">0.96</td>
-            <td align="center">0.97</td>
-            <td align="center">0.89</td>
-            <td align="center">0.88</td>
-            <td align="center">0.86</td>
-            <td align="center">0.85</td>
+            <td align="center"><b>QIKc</b></td>
+            <td align="center"><b>0.98</b></td>
+            <td align="center"><b>0.97</b></td>
+            <td align="center"><b>0.96</b></td>
+            <td align="center"><b>0.97</b></td>
+            <td align="center"><b>0.89</b></td>
+            <td align="center"><b>0.88</b></td>
+            <td align="center"><b>0.86</b></td>
+            <td align="center"><b>0.85</b></td>
         </tr>
         <tr>
-            <td align="center">QIKo (0.9)</td>
+            <td align="center"><b>QIKo (0.9)</b></td>
             <td align="center">0.9</td>
             <td align="center">0.9</td>
             <td align="center">0.88</td>
@@ -160,7 +160,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.66</td>
         </tr>
         <tr>
-            <td align="center">QIKo (0.8)</td>
+            <td align="center"><b>QIKo (0.8)</b></td>
             <td align="center">0.8</td>
             <td align="center">0.81</td>
             <td align="center">0.8</td>
@@ -176,32 +176,32 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
     <table>
         <tr>
             <td rowspan="2"></td>
-            <td align="center" colspan="4">τ=0.6</td>
-            <td align="center" colspan="4">τ=0.7</td>
+            <td align="center" colspan="4"><b>τ=0.6</b></td>
+            <td align="center" colspan="4"><b>τ=0.7</b></td>
         </tr>
         <tr>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
         </tr>
         <tr>
-            <td align="center">QIKc</td>
-            <td align="center">0.99</td>
-            <td align="center">0.96</td>
-            <td align="center">0.97</td>
-            <td align="center">0.97</td>
-            <td align="center">0.92</td>
-            <td align="center">0.89</td>
-            <td align="center">0.86</td>
-            <td align="center">0.86</td>
+            <td align="center"><b>QIKc</b></td>
+            <td align="center"><b>0.99</b></td>
+            <td align="center"><b>0.96</b></td>
+            <td align="center"><b>0.97</b></td>
+            <td align="center"><b>0.97</b></td>
+            <td align="center"><b>0.92</b></td>
+            <td align="center"><b>0.89</b></td>
+            <td align="center"><b>0.86</b></td>
+            <td align="center"><b>0.86</b></td>
         </tr>
         <tr>
-            <td align="center">QIKo (0.9)</td>
+            <td align="center"><b>QIKo (0.9)</b></td>
             <td align="center">0.84</td>
             <td align="center">0.86</td>
             <td align="center">0.85</td>
@@ -212,7 +212,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.62</td>
         </tr>
         <tr>
-            <td align="center">QIKo (0.8)</td>
+            <td align="center"><b>QIKo (0.8)</b></td>
             <td align="center">0.76</td>
             <td align="center">0.76</td>
             <td align="center">0.73</td>
@@ -228,32 +228,32 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
     <table>
         <tr>
             <td rowspan="2"></td>
-            <td align="center" colspan="4">τ=0.6</td>
-            <td align="center" colspan="4">τ=0.7</td>
+            <td align="center" colspan="4"><b>τ=0.6</b></td>
+            <td align="center" colspan="4"><b>τ=0.7</b></td>
         </tr>
         <tr>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
         </tr>
         <tr>
-            <td align="center">QIK</td>
-            <td align="center">0.97</td>
-            <td align="center">0.97</td>
-            <td align="center">0.97</td>
-            <td align="center">0.97</td>
-            <td align="center">0.89</td>
-            <td align="center">0.89</td>
-            <td align="center">0.88</td>
-            <td align="center">0.88</td>
+            <td align="center"><b>QIK</b></td>
+            <td align="center"><b>0.97</b></td>
+            <td align="center"><b>0.97</b></td>
+            <td align="center"><b>0.97</b></td>
+            <td align="center"><b>0.97</b></td>
+            <td align="center"><b>0.89</b></td>
+            <td align="center"><b>0.89</b></td>
+            <td align="center"><b>0.88</b></td>
+            <td align="center"><b>0.88</b></td>
         </tr>
         <tr>
-            <td align="center">CroW</td>
+            <td align="center"><b>CroW</b></td>
             <td align="center">0.92</td>
             <td align="center">0.91</td>
             <td align="center">0.90</td>
@@ -264,7 +264,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.71</td>
         </tr>
         <tr>
-            <td align="center">FR-CNN</td>
+            <td align="center"><b>FR-CNN</b></td>
             <td align="center">0.87</td>
             <td align="center">0.87</td>
             <td align="center">0.86</td>
@@ -275,7 +275,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.66</td>
         </tr>
         <tr>
-            <td align="center">DIR</td>
+            <td align="center"><b>DIR</b></td>
             <td align="center">0.86</td>
             <td align="center">0.86</td>
             <td align="center">0.84</td>
@@ -286,7 +286,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.61</td>
         </tr>
         <tr>
-            <td align="center">DELF</td>
+            <td align="center"><b>DELF</b></td>
             <td align="center">0.64</td>
             <td align="center">0.66</td>
             <td align="center">0.63</td>
@@ -297,7 +297,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.43</td>
         </tr>
         <tr>
-            <td align="center">LIRE</td>
+            <td align="center"><b>LIRE</b></td>
             <td align="center">0.54</td>
             <td align="center">0.57</td>
             <td align="center">0.54</td>
@@ -313,32 +313,32 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
     <table>
         <tr>
             <td rowspan="2"></td>
-            <td align="center" colspan="4">τ=0.6</td>
-            <td align="center" colspan="4">τ=0.7</td>
+            <td align="center" colspan="4"><b>τ=0.6</b></td>
+            <td align="center" colspan="4"><b>τ=0.7</b></td>
         </tr>
         <tr>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
         </tr>
         <tr>
-            <td align="center">QIK</td>
-            <td align="center">0.97</td>
-            <td align="center">0.96</td>
-            <td align="center">0.96</td>
-            <td align="center">0.96</td>
-            <td align="center">0.9</td>
-            <td align="center">0.89</td>
-            <td align="center">0.88</td>
-            <td align="center">0.87</td>
+            <td align="center"><b>QIK</b></td>
+            <td align="center"><b>0.97</b></td>
+            <td align="center"><b>0.96</b></td>
+            <td align="center"><b>0.96</b></td>
+            <td align="center"><b>0.96</b></td>
+            <td align="center"><b>0.9</b></td>
+            <td align="center"><b>0.89</b></td>
+            <td align="center"><b>0.88</b></td>
+            <td align="center"><b>0.87</b></td>
         </tr>
         <tr>
-            <td align="center">CroW</td>
+            <td align="center"><b>CroW</b></td>
             <td align="center">0.88</td>
             <td align="center">0.89</td>
             <td align="center">0.88</td>
@@ -349,7 +349,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.67</td>
         </tr>
         <tr>
-            <td align="center">FR-CNN</td>
+            <td align="center"><b>FR-CNN</b></td>
             <td align="center">0.83</td>
             <td align="center">0.84</td>
             <td align="center">0.83</td>
@@ -360,7 +360,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.61</td>
         </tr>
         <tr>
-            <td align="center">DIR</td>
+            <td align="center"><b>DIR</b></td>
             <td align="center">0.82</td>
             <td align="center">0.83</td>
             <td align="center">0.8</td>
@@ -371,7 +371,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.55</td>
         </tr>
         <tr>
-            <td align="center">DELF</td>
+            <td align="center"><b>DELF</b></td>
             <td align="center">0.62</td>
             <td align="center">0.63</td>
             <td align="center">0.6</td>
@@ -382,7 +382,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.39</td>
         </tr>
         <tr>
-            <td align="center">LIRE</td>
+            <td align="center"><b>LIRE</b></td>
             <td align="center">0.48</td>
             <td align="center">0.52</td>
             <td align="center">0.51</td>
@@ -398,32 +398,32 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
     <table>
         <tr>
             <td rowspan="2"></td>
-            <td align="center" colspan="4">τ=0.6</td>
-            <td align="center" colspan="4">τ=0.7</td>
+            <td align="center" colspan="4"><b>τ=0.6</b></td>
+            <td align="center" colspan="4"><b>τ=0.7</b></td>
         </tr>
         <tr>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
-            <td align="center">k=2</td>
-            <td align="center">k=4</td>
-            <td align="center">k=8</td>
-            <td align="center">k=16</td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
+            <td align="center"><b>k=2</b></td>
+            <td align="center"><b>k=4</b></td>
+            <td align="center"><b>k=8</b></td>
+            <td align="center"><b>k=16</b></td>
         </tr>
         <tr>
-            <td align="center">QIK</td>
-            <td align="center">0.97</td>
-            <td align="center">0.95</td>
-            <td align="center">0.95</td>
-            <td align="center">0.95</td>
-            <td align="center">0.92</td>
-            <td align="center">0.88</td>
-            <td align="center">0.85</td>
-            <td align="center">0.84</td>
+            <td align="center"><b>QIK</b></td>
+            <td align="center"><b>0.97</b></td>
+            <td align="center"><b>0.95</b></td>
+            <td align="center"><b>0.95</b></td>
+            <td align="center"><b>0.95</b></td>
+            <td align="center"><b>0.92</b></td>
+            <td align="center"><b>0.88</b></td>
+            <td align="center"><b>0.85</b></td>
+            <td align="center"><b>0.84</b></td>
         </tr>
         <tr>
-            <td align="center">CroW</td>
+            <td align="center"><b>CroW</b></td>
             <td align="center">0.96</td>
             <td align="center">0.93</td>
             <td align="center">0.91</td>
@@ -434,7 +434,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.68</td>
         </tr>
         <tr>
-            <td align="center">FR-CNN</td>
+            <td align="center"><b>FR-CNN</b></td>
             <td align="center">0.93</td>
             <td align="center">0.92</td>
             <td align="center">0.9</td>
@@ -445,7 +445,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.67</td>
         </tr>
         <tr>
-            <td align="center">DIR</td>
+            <td align="center"><b>DIR</b></td>
             <td align="center">0.89</td>
             <td align="center">0.89</td>
             <td align="center">0.86</td>
@@ -456,7 +456,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.61</td>
         </tr>
         <tr>
-            <td align="center">DELF</td>
+            <td align="center"><b>DELF</b></td>
             <td align="center">0.72</td>
             <td align="center">0.72</td>
             <td align="center">0.69</td>
@@ -467,7 +467,7 @@ We have a create setup script `setup_scripts/setup_prereq.sh` to install these p
             <td align="center">0.47</td>
         </tr>
         <tr>
-            <td align="center">LIRE</td>
+            <td align="center"><b>LIRE</b></td>
             <td align="center">0.54</td>
             <td align="center">0.57</td>
             <td align="center">0.56</td>
