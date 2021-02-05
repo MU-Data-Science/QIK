@@ -27,4 +27,13 @@ public class Constants {
 	public static final int LIRE_FETCH_LIMIT = 20;
 	public static final String IMAGE_URL = "http://localhost:8080/QIK_Image_Data/";
 
+	// Embeddings
+	public static final int FILTER_SIZE = 10000;
+	public static final String NOUN = "noun";
+	public static final String VERB = "verb";
+	public static final String EMBEDDING_URL = "http://localhost:5000/getNeighbours";
+	public static final int EMBED_K = 3;
+	public static final String EMBED_NOUN_QUERY_STRING = "//NN/text() | //NNS/text() | //NNP/text() | //NNPS/text()";
+	public static final String EMBED_VERB_QUERY_STRING = "//VB/text()  | //VBD/text() | //VBG/text() | //VBN/text() | //VBP/text() | //VBZ/text()";
+
 }

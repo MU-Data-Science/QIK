@@ -1,0 +1,88 @@
+/*Home Page Style - Start*/
+.search-container{
+    text-align: center;
+    margin-top: 5%;
+}
+
+#qik {
+    font-weight: 700;
+    font-size: 500%;
+    font-family: Montserrat;
+}
+
+#homeSearchBar {
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid #000;
+    border-radius: 50px;
+}
+
+#homeSearchBar input[type="text"] {
+    border-bottom: none;
+    outline: none;
+}
+
+#homeSearchBar .file-path {
+    margin-top: 1%;
+    text-align: center;
+}
+
+.search-column {
+    float: left;
+    width: 50%;
+}
+
+#homeButton {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#homeButton a {
+    border-radius: 10px;
+    width: 75%
+}
+/*Home Page Style - End*/
+
+/*Adjusting the popup width*/
+.modal {
+    width: 50%;
+}
+
+/*Loading Style - Start*/
+.loading-wrapper {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f0f0f5;
+    opacity: 95%;
+}
+
+.progress {
+    margin-top: 25%;
+    margin-left: 10%;
+    width: 80%;
+    height: 1%;
+}
+/*Loading Style - End*/
+
+/*QIK Left Logo*/
+.qik-logo {
+    color: #000000;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap;
+}
+
+/*Centering the architecture diagram */
+#architecture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 40%
+}

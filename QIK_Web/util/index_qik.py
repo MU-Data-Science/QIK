@@ -84,7 +84,7 @@ class Process(threading.Thread):
     def exec(self):
         # Getting the complete image path
         filename = IMAGE_DIR + self.getName()
-        print("Starting :: ", filename)
+        print("index_qik.py :: Process :: exec :: Starting :: ", filename)
 
         # Fetching the geo co-ordinates for the images.
         meta_data = get_coordinates.ImageMetaData(filename)

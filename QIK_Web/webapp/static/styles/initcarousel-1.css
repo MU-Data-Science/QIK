@@ -1,0 +1,86 @@
+/* content */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+#amazingcarousel-1 .amazingcarousel-image {	
+	position: relative;
+	padding: 0px;
+	margin: 0 auto;
+}
+
+#amazingcarousel-1 .amazingcarousel-image img {
+	display: block;
+	width: 120px;
+      margin: 0 auto;
+	border: 0;
+	padding: 0;
+	-moz-border-radius: 60px;
+	-webkit-border-radius: 60px;
+	border-radius: 60px;
+}
+
+#amazingcarousel-1 .amazingcarousel-text {
+}
+
+#amazingcarousel-1 blockquote {
+	font: italic 14px Georgia, serif;
+	position: relative;
+	color: #333;
+	text-align: center;
+	margin: 8px 18px 8px 24px;
+}
+
+#amazingcarousel-1  cite {
+	color: #666;
+	font: italic 14px Georgia, serif;
+	display: block;
+	position: relative;
+	margin: 4px 18px;
+	text-align: center;
+}
+
+/* carousel */
+
+#amazingcarousel-container-1 {
+	padding: 10px 10px 20px 10px;
+}
+
+#amazingcarousel-1 .amazingcarousel-list-container { 
+	padding: 16px 0;
+}
+
+/* item */
+
+#amazingcarousel-1 .amazingcarousel-item-container {
+	text-align: center;
+	padding: 6px;
+}
+
+/* arrows */
+
+#amazingcarousel-1 .amazingcarousel-prev {
+	left: 0%;
+	top: 50%;
+	margin-left: 4px;
+	margin-top: -16px;
+}
+
+#amazingcarousel-1 .amazingcarousel-next {
+	right: 0%;
+	top: 50%;
+	margin-right: 4px;
+	margin-top: -16px;
+}
+
+/* navigation bullets */
+
+#amazingcarousel-1 .amazingcarousel-nav {
+	position: absolute;
+	width: 100%;
+	top: 100%;
+}
+
+#amazingcarousel-1 .amazingcarousel-bullet-wrapper {
+	margin: 4px auto;
+}
+

@@ -1,123 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {% load static %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>QIK</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src='https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js'></script>
+    <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js'></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="{% static 'js/home-view.js' %}"></script>
 
-    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="{% static 'css/freelancer.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link href="{% static 'styles/home.css' %}" rel="stylesheet">
-    <script src="{% static 'scripts/blockUI.js' %}"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.js"> </script>
+    <link href="{% static 'css/home-style.css' %}" rel="stylesheet">
 </head>
+<body>
+{% load filters %}
+{% load tags %}
 
-<body id="page-top">
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="http://www.nsfcbl.org">
-            <img src="https://i2.wp.com/nsfcbl.org/wp-content/uploads/2016/11/cropped-cropped-small-logo-2.png?fit=512%2C512" style="width: 70px"></a>
-
-        <div id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8000/search/image_search">Search</a>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://github.com/MU-Data-Science/QIK">Github</a>
-                </li>
+<!--Header - Start-->
+<form id="query-form" method="post" enctype="multipart/form-data">
+    <nav class="white">
+        <div class="nav-wrapper">
+            <ul class="left">
+                <li><a href="{% url 'image_search' %}" class="qik-logo">QIK</a></li>
             </ul>
-        </div>
-    </div>
-</nav>
+            <ul class="hide-on-med-and-down right">
+                <li><a href="{% url 'about' %}" class="black-text">About</a></li>
+                <li><a href="{% url 'image_search' %}" class="black-text">Search</a></li>
+                <li><a href="#" class="black-text" id="explain">Explain</a></li>
+                <li class="active"><a href="#" class="black-text">Index</a></li>
+                <li><a href="https://github.com/MU-Data-Science/QIK" class="black-text">Code</a></li>
+            </ul>
+	    </div>
+    </nav>
+</form>
+<!--Header End-->
 
-<!-- Header -->
-<header class="masthead bg-primary text-white text-center">
-    <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
-        <h1 class="text-uppercase mb-0">QIK</h1>
-        <hr class="star-light">
+<form id="search-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
 
-        <div>
-            <form style="border-style: dashed; align-self: center; color: #313F51" method="post" enctype="multipart/form-data"></br>
-                {% csrf_token %}
-                <div class="form-group">
-                    <label style="align-self: center;">{{ form.image_files }}</label>
-                    {{ field }}
-                </div>
+    <div class="search-container">
+        <!--Logo - Start-->
+        <h1 id="qik">QIK</h1>
+        <!--Logo - End-->
 
-                <button class="btn btn-xl btn-outline-light" type="submit" id="index_submit">Submit</button>
-                </br> </br>
-            </form>
-        </div>
-        </br>
-
-        <h2 class="font-weight-light mb-0">Please add images to index.</h2>
-    </div>
-</header>
-
-<!-- Footer -->
-<footer class="footer text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 mb-5 mb-lg-0">
-                <h4 class="text-uppercase mb-4">University of Missouri-Kansas City</h4>
-                <p class="lead mb-0">5100 Rockhill Rd
-                    <br>Kansas City, MO 64110</p>
-            </div>
-            <div class="col-md-4 mb-5 mb-lg-0">
-                <h4 class="text-uppercase mb-4">Around the Web</h4>
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item">
-                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/UMKansasCity/">
-                            <i class="fab fa-fw fa-facebook-f"></i>
-                        </a>
-                    </li>
-
-                    <li class="list-inline-item">
-                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/UMKansasCity?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-                            <i class="fab fa-fw fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/school/umkc/">
-                            <i class="fab fa-fw fa-linkedin-in"></i>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h4 class="text-uppercase mb-4">Big Data Lab</h4>
-                <p class="lead mb-0">Dr. Praveen Rao | Arun George | Mohamed Gharibi
-                    <!-- <a href="http://startbootstrap.com">Start Bootstrap</a>.</p> -->
+        <!--Search Bar - Start-->
+        <div id="homeSearchBar">
+            <div class="file-field col black-text">
+                <input class="file-path" type="text" placeholder="Upload an image to add to the index">{{ form.image_files }}</input>
             </div>
         </div>
-    </div>
-</footer>
+        <br>
+        <!--Search Bar - End-->
 
-<div class="copyright py-4 text-center text-white">
-    <div class="container">
-        <small>Copyright &copy; CBL-UMKC 2019</small>
+        <!--Search Buttons - Start-->
+        <div id="homeButton">
+                <a class="waves-effect waves-light btn" id="search" ><i class="material-icons right">search</i>Add to Index</a>
+        </div>
+        <!--Search Buttons - End-->
     </div>
+</form>
+
+<!--Loading - Start-->
+<div class="loading-wrapper">
+ <div class="progress">
+      <div class="indeterminate" ></div>
+  </div>
 </div>
-<script src="{% static 'scripts/results.js' %}"></script>
+<!--Loading - End-->
+
+<!--Alert after indexing-->
+<p style="visibility: hidden; height: 0px" id="indexAlert">{{ index_alert }}</p>
 
 </body>
-
 </html>

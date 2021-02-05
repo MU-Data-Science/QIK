@@ -2,8 +2,8 @@ HOST_IP="localhost"
 TOMCAT_IP_ADDR = "http://localhost:8080"
 TOMCAT_LOC = "/mydata/apache-tomcat/webapps"
 AUTO_ENC_CHECKPOINT_PATH = "../ML_Models/AutoEncoder/checkpoints/model.h5"
-QIK_WEBAPP_PATH="/mydata/apache-tomcat/webapps/QIK/"
-QIK_TOMCAT_URL="http://localhost:8080/QIK/"
+QIK_WEBAPP_PATH="/mydata/apache-tomcat/webapps/QIK_Image_Data/"
+QIK_TOMCAT_URL="http://localhost:8080/QIK_Image_Data/"
 QUERY_IMAGE_PATH = QIK_WEBAPP_PATH + "image.jpg"
 KNN_INDEX="/mydata/KNN_Index/knn.index"
 KNN_DICT="/mydata/KNN_Index/files.txt"
@@ -11,7 +11,7 @@ LIRE_QUERY="http://localhost:8080/IndexEngine/queryLire?query="
 THREAD_COUNT = 10
 SOLR_QUERY_URL = "http://localhost:8080/IndexEngine/query?query="
 IS_TF_RANKING_ENABLED = False;
-TOMCAT_OLD_IP_ADDR = "http://128.105.144.88:8080"
+TOMCAT_OLD_IP_ADDR = "http://128.110.154.115:8080"
 IMAGE_DATA_DIR= "/QIK_Image_Data/"
 LIRE_INDEX_URL="http://localhost:8080/IndexEngine/indexLire?dir="
 INDEX_ENGINE_URL = "http://localhost:8080/IndexEngine/postData?data="
@@ -51,3 +51,10 @@ SENT_SIM_MODULE_URL = "https://tfhub.dev/google/universal-sentence-encoder/2"
 FAISS_INDEX_PATH = "../ML_Models/SentenceSimilarity/sent_sim.index"
 FAISS_FILE_LST_PATH = "../ML_Models/SentenceSimilarity/files.pkl"
 FAISS_FETCH_LIMIT = 20
+
+# Similar Search Constants.
+SIMILAR_SEARCH_URL="http://localhost:8080/IndexEngine/similarImages?query="
+
+# Explain Plan Constants.
+EXPLAIN_SEARCH_URL="http://localhost:8080/IndexEngine/explain?query="
+QIK_DATA_DIR = '../QIK_Web/data/'

@@ -1,0 +1,293 @@
+html, body { height: 100%; width: 100%; margin: 0; }
+
+/* Top Bar - Start */
+.qik-logo {
+    color: #000000;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap;
+}
+
+#topbarsearch .input-field .prefix {
+    width:0rem !important;
+}
+
+#topbarsearch nav ul li:hover, nav ul li.active {
+    background-color: none !important;
+}
+
+.input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content{
+    margin-left: 1rem !important;
+}
+
+.link {
+    margin-left: 500px;
+}
+/*Top Bar - End*/
+
+/*Image Grid Style - Start*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: sans-serif; }
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid-sizer, .grid-item {
+    width: 33.333%;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    width: 100%;
+}
+/* Image Grid Style - End */
+
+/* Sliding Carousel - Start */
+.MultiCarousel {
+	/*margin-top:-6%;*/
+	overflow: hidden;
+	width: 100%;
+	position:relative;
+}
+
+.MultiCarousel .MultiCarousel-inner {
+	transition: 1s ease all;
+	float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item {
+	float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item > div {
+	text-align: center;
+	margin:0px;
+	/*color:#666;*/
+}
+
+.MultiCarousel .leftLst, .MultiCarousel .rightLst {
+	position:absolute;
+	top:calc(50% - 20px);
+}
+
+.MultiCarousel .leftLst {
+	left:0;
+}
+
+.MultiCarousel .rightLst {
+	right:0;
+}
+/* Sliding Carousel - End */
+
+/* Image Hover - Start */
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    padding: 1em 0;
+    float: left;
+    width: 50%;
+}
+@media screen and (max-width: 640px){
+    .container{
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .container{
+        width: 33.33333%;
+    }
+}
+
+.content {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.content .content-overlay {
+    border-radius: 3%;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 98%;
+    width: 98%;
+    left: 1%;
+    top: 1%;
+    bottom: 1%;
+    right: 1%;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+    opacity: 1;
+}
+
+.content-image{
+    width: 100%;
+    border-radius: 3%;
+    padding: 1%;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.content-details h3{
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.content-details p{
+    color: #fff;
+    font-size: 0.8em;
+}
+/* Image Hover - End */
+
+/* Similar Images Tab - Start */
+.collapsible-body {
+    padding: 0rem;
+}
+/* Similar Images Tab - End */
+
+/* Search Line during on search results - Start */
+.search-line {
+    margin-top:-10px;
+    border-bottom: 1px solid;
+}
+/* Search Line during on search results - End */
+
+/* For overriding the width of the dropdown - Start */
+.dropdown-style {
+    width: unset !important;
+}
+/* For overriding the width of the dropdown - End */
+.modal {
+    width: 50%;
+}
+
+/*Loading Style - Start*/
+.loading-wrapper {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f0f0f5;
+    opacity: 95%;
+}
+
+.progress {
+    margin-top: 25%;
+    margin-left: 10%;
+    width: 80%;
+    height: 1%;
+}
+/*Loading Style - End*/
+
+/*Alligning the icons on the tab header*/
+.tab-icon {
+    vertical-align: middle;
+}
+
+.top-accordion-wrapper {
+    width: 100%;
+    /*height: 50%;*/
+    height: calc(25% + 200px);
+}
+
+.top-accordion {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+}
+.query-image {
+    height: 100%;
+    width: 20%;
+    float: left;
+}
+
+.similar-images {
+    height: 100%;
+    width: 79%;
+    margin-left: 1%;
+    float: left;
+}
+
+/*Setting the query image height*/
+.query-image img {
+    height:200px;
+}
+
+.search-results {
+    margin: 0px;
+    float:left;
+    height: 500px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/*Setting the accordion header width uniform*/
+.top-accordion .collapsible-header {
+    height: 10px;
+}
+
+/*Centering the text on the card*/
+.card {
+    text-align: center;
+}

@@ -13,10 +13,47 @@ import urllib
 from apted import APTED, PerEditOperationConfig
 import apted.helpers as apth
 import detect_objects
+import random
+
+def get_similar_images(query_image):
+    print("qik_search :: get_similar_images :: query_image :: ", query_image)
+    similar_images = {}
+
+    # Noting the time taken for further auditing.
+    time = datetime.datetime.now()
+
+    # Querying the backend to fetch the list of similar images.
+    cap_req = constants.SIMILAR_SEARCH_URL + query_image
+    cap_res_text = requests.get(cap_req).text
+    print("qik_search :: get_similar_images :: cap_res_text :: ", cap_res_text)
+
+    try:
+        # Converting the response to a JSON.
+        cap_res = json.loads(requests.get(cap_req).text)
+
+        # Shuffling the dictionary.
+        items = list(cap_res.items())
+        random.shuffle(items)
+        shuffled_cap_res = dict(items)
+
+        # Replacing the image URL with an updated URL.
+        for link in shuffled_cap_res:
+            caption = shuffled_cap_res[link]
+            updated_link = link.replace(constants.TOMCAT_OLD_IP_ADDR, constants.TOMCAT_IP_ADDR)
+            similar_images[updated_link] = caption
+        print("qik_search :: get_similar_images :: similar_images :: ", similar_images)
+
+        # Auditing the response time.
+        print("qik_search :: get_similar_images :: Execution time :: ", (datetime.datetime.now() - time))
+    except:
+        print("qik_search :: get_similar_images :: No similar images found.")
+
+    return similar_images
 
 def qik_search(query_image, ranking_func=None, obj_det_enabled=False, pure_objects_search=False, fetch_count=None):
     obj_res = None
     cap_res = None
+    similar_images = None
 
     captionRanksDict = {}
     sortedCaptionRanksDict = {}
@@ -155,12 +192,18 @@ def qik_search(query_image, ranking_func=None, obj_det_enabled=False, pure_objec
             # Formating done for Ranking
             sortedCaptionRanksDict = sorted(captionRanksDict.items(), key=lambda kv: kv[1], reverse=True)
 
+        similar_images = get_similar_images(query)
+        print("qik_search :: qik_search :: similar_images :: ", similar_images)
+
     # Auditing the QIK execution time.
     print("QIK Execution time :: ", (datetime.datetime.now() - time))
 
+    print("Arun :: fetch_count :: ", fetch_count)
+
     if sortedCaptionRanksDict and fetch_count is not None:
+        print("Arun :: Entering :: ")
         print("sortedCaptionRanksDict :: ", sortedCaptionRanksDict[:fetch_count])
-        return sortedCaptionRanksDict[:fetch_count]
+        return query, sortedCaptionRanksDict[:fetch_count], similar_images
     else:
         print("sortedCaptionRanksDict :: ", sortedCaptionRanksDict)
-        return sortedCaptionRanksDict
+        return query, sortedCaptionRanksDict, similar_images

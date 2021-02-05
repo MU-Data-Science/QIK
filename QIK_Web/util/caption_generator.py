@@ -31,10 +31,12 @@ def init():
 
     FLAGS = tf.flags.FLAGS
 
-    tf.flags.DEFINE_string("checkpoint_path", "../ML_Models/ShowAndTell/checkpoints/",
+    if 'checkpoint_path' not in tf.flags.FLAGS.__flags:
+      tf.flags.DEFINE_string("checkpoint_path", "../ML_Models/ShowAndTell/checkpoints/",
                            "Model checkpoint file or directory containing a "
                            "model checkpoint file.")
-    tf.flags.DEFINE_string("vocab_file", "../ML_Models/ShowAndTell/checkpoints/word_counts.txt",
+    if 'vocab_file' not in tf.flags.FLAGS.__flags:
+      tf.flags.DEFINE_string("vocab_file", "../ML_Models/ShowAndTell/checkpoints/word_counts.txt",
                            "Text file containing the vocabulary.")
 
     tf.logging.set_verbosity(tf.logging.INFO)
