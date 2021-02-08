@@ -125,7 +125,7 @@ cd $QIK_HOME && git clone https://github.com/JoaoFelipe/apted.git APTED
 bash $QIK_HOME/scripts/deploy_scripts/deploy_index_engine.sh
 
 # Directory to save the query image.
-mkdir $HOME/apache-tomcat/webapps/QIK
+mkdir $HOME/apache-tomcat/webapps/QIK_Image_Data
 
 # Setting Stanford Parser Classpath
 export CLASSPATH=$QIK_HOME/IndexEngine/lib
@@ -143,3 +143,7 @@ rm -rvf $QIK_HOME/BaseX92.zip
 
 # Executing profile.
 echo '. '$HOME'/.bashrc' >> /users/$USER/.profile
+
+# Starting up the embedding web application.
+cd $QIK_HOME/Embeddings
+python app.py &>> Embeddings.log &

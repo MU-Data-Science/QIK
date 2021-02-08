@@ -120,3 +120,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+TOMCAT_IP_ADDR = constants.TOMCAT_IP_ADDR
+HOST_IP = constants.HOST_IP
+IMAGE_PATH = constants.TOMCAT_LOC
