@@ -134,6 +134,19 @@ echo 'export CLASSPATH=$QIK_HOME/IndexEngine/lib' >> /users/$USER/.profile
 # Installing Python dependencies.
 pip install -r $QIK_HOME/scripts/deploy_scripts/requirements.txt
 
+# Starting up the Embedding web application.
+cd $QIK_HOME/Embeddings
+python app.py &>> Embeddings.log &
+
+# Installing xvfb and emulating a vitural display.
+sudo apt-get -y install xvfb
+Xvfb :99 &
+export DISPLAY=:99
+echo 'export DISPLAY=:99' >> /users/$USER/.profile
+
+# Installing pdfcrop
+sudo apt-get -y install texlive-extra-utils
+
 # Clean up unwanted files.
 rm -rvf $HOME/bazel-0.25.3-installer-linux-x86_64.sh
 rm -rvf $HOME/jdk-8u131-linux-x64.tar.gz
@@ -144,6 +157,3 @@ rm -rvf $QIK_HOME/BaseX92.zip
 # Executing profile.
 echo '. '$HOME'/.bashrc' >> /users/$USER/.profile
 
-# Starting up the embedding web application.
-cd $QIK_HOME/Embeddings
-python app.py &>> Embeddings.log &
