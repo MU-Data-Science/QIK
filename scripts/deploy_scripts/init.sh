@@ -3,7 +3,7 @@
 
 # Constants.
 HOME=${HOME}
-QIK_HOME=${PWD}
+QIK_HOME=${PWD}/../..
 QIK_CORE_NAME=QIK
 USER=${USER}
 

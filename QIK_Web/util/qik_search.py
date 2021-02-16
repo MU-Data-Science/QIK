@@ -76,31 +76,32 @@ def qik_search(query_image, ranking_func=None, obj_det_enabled=False, pure_objec
         print("qik_search :: qik_search :: obj_res :: ", obj_res)
 
     if pure_objects_search:
-        # Forming the return image set.
-        for resMap in obj_res:
-            caption = resMap['caption']
-            image = resMap['fileURL']
+        if obj_res is not None:
+            # Forming the return image set.
+            for resMap in obj_res:
+                caption = resMap['caption']
+                image = resMap['fileURL']
 
-            # Temp Fix done to replace Tomcat IP. Needs to be handled in the IndexEngine.
-            image_path = image.replace(constants.TOMCAT_OLD_IP_ADDR, constants.TOMCAT_IP_ADDR)
+                # Temp Fix done to replace Tomcat IP. Needs to be handled in the IndexEngine.
+                image_path = image.replace(constants.TOMCAT_OLD_IP_ADDR, constants.TOMCAT_IP_ADDR)
 
-            captionRanksDict[image_path + ":: " + caption] = 1
-        print(captionRanksDict)
+                captionRanksDict[image_path + ":: " + caption] = 1
+            print(captionRanksDict)
 
-        # Formating done for Ranking
-        sortedCaptionRanksDict = sorted(captionRanksDict.items(), key=lambda kv: kv[1], reverse=True)
+            # Formating done for Ranking
+            sortedCaptionRanksDict = sorted(captionRanksDict.items(), key=lambda kv: kv[1], reverse=True)
 
-        # Auditing the QIK execution time.
-        print("QIK Execution time :: ", (datetime.datetime.now() - time))
+            # Auditing the QIK execution time.
+            print("QIK Execution time :: ", (datetime.datetime.now() - time))
 
-        if sortedCaptionRanksDict and fetch_count is not None:
-            print("sortedCaptionRanksDict :: ", sortedCaptionRanksDict[:fetch_count])
-            return sortedCaptionRanksDict[:fetch_count]
-        else:
-            print("sortedCaptionRanksDict :: ", sortedCaptionRanksDict)
-            return sortedCaptionRanksDict
+            if sortedCaptionRanksDict and fetch_count is not None:
+                print("sortedCaptionRanksDict :: ", sortedCaptionRanksDict[:fetch_count])
+                return "Query Image", sortedCaptionRanksDict[:fetch_count], None
+            else:
+                print("sortedCaptionRanksDict :: ", sortedCaptionRanksDict)
+                return  "Query Image", sortedCaptionRanksDict, None
 
-        return sortedCaptionRanksDict
+        return "Query Image", sortedCaptionRanksDict, None
 
     # Initial Loading of the caption generator model.
     caption_generator.init()

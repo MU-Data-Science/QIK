@@ -2,7 +2,7 @@
 
 # Constants.
 HOME=${HOME}
-QIK_HOME=${PWD}
+QIK_HOME=${PWD}/../..
 SYSTEM="15k"
 SYSTEM_1="120k"
 SYSTEM_2="15k"
@@ -63,11 +63,14 @@ if [ ${SYSTEM} = ${SYSTEM_1} ]; then
   cat Images.tar.partd >> Images.tar
   tar -xvf Images.tar
 
+  # Changing the old IP address.
+  echo 'TOMCAT_OLD_IP_ADDR = "http://128.110.154.115:8080"' >> ${QIK_HOME}/QIK_Web/util/constants.py
+
 elif [ ${SYSTEM} = ${SYSTEM_2} ]; then
   echo "Setting up the system for the 15k dataset"
 
   # Downloading the pre-constructed index
-  wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/Ed5IghJdYaVNq9XcTDwWmMoBfoyRdDSfx2s4nKw7ZCJn_Q?download=1 -O $QIK_HOME/BaseX/data/Index.tar
+  wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/EZedBIRgYntGpc9h_hsFezcBups95AkJgeR2TwyoFxW8tA?download=1 -O $QIK_HOME/BaseX/data/Index.tar
 
   # Extracting the pre-constructed index
   cd $QIK_HOME/BaseX/data && tar -xvf Index.tar
@@ -77,6 +80,9 @@ elif [ ${SYSTEM} = ${SYSTEM_2} ]; then
 
   # Extracting the 15k images dataset.
   cd $HOME/apache-tomcat/webapps && tar -xvf Images.tar
+
+  # Changing the old IP address.
+  echo 'TOMCAT_OLD_IP_ADDR = "http://128.105.144.88:8080"' >> ${QIK_HOME}/QIK_Web/util/constants.py
 
 elif [ ${SYSTEM} = ${SYSTEM_3} ]; then
   echo "Setting up Unsplash dataset"
