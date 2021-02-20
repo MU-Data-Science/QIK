@@ -86,6 +86,38 @@ elif [ ${SYSTEM} = ${SYSTEM_2} ]; then
 
 elif [ ${SYSTEM} = ${SYSTEM_3} ]; then
   echo "Setting up Unsplash dataset"
+
+  # Downloading the pre-constructed index
+  wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/EZmt3WOyro5OngC6gUxpJGYBUzK49phYlQ2dmzmruhQ1Ow?download=1 -O $QIK_HOME/BaseX/data/Index.tar
+
+  # Extracting the pre-constructed index
+  cd $QIK_HOME/BaseX/data && tar -xvf Index.tar
+
+  # Downloading the Unsplash Image dataset.
+  wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/EXG2o1hFb4BNvvGRDhjqLNsB2f0J-cO4Sxnyi_qFeSZoIw?download=1 -O $HOME/apache-tomcat/webapps/Images.tar.parta
+  wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/EVSzJllUe0NFookI3VpYQSwBuIjjd3xDYhP5Dp2qRprHvw?download=1 -O $HOME/apache-tomcat/webapps/Images.tar.partb
+  wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/EY1gDNw6r7VCtZj9uNw13rAB_1koBl47MMQB5Pye56LJeA?download=1 -O $HOME/apache-tomcat/webapps/Images.tar.partc
+  wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/EfSJEHFp9bJJjujcC4dRetgBTeFjtMejY_FCyRvXm1x2dg?download=1 -O $HOME/apache-tomcat/webapps/Images.tar.partd
+  wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/Eby42ZJA96VGnxyASD-hwDYBCEVqWXFW3KF13eIBqtyscg?download=1 -O $HOME/apache-tomcat/webapps/Images.tar.parte
+  wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/EZRJJYC5iHlFqDA7lERIW5sBCh7yaF3c_I-9f9Mwhq9ZPg?download=1 -O $HOME/apache-tomcat/webapps/Images.tar.partf
+  wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/EWYyZ4PGiwBNrN0NfsU-RKoBbpHuYiY4kkSwrqK4xygkCw?download=1 -O $HOME/apache-tomcat/webapps/Images.tar.partg
+  wget https://mailmissouri-my.sharepoint.com/:u:/g/personal/az2z7_umsystem_edu/ESjYJIR907xLrbLM6u2hkC8Bsy1xCgxiuey1ebgD8-b9HA?download=1 -O $HOME/apache-tomcat/webapps/Images.tar.parth
+
+  # Extracting the Unsplash Image dataset.
+  cd $HOME/apache-tomcat/webapps && rm -rvf Images.tar
+  cat Images.tar.parta >> Images.tar
+  cat Images.tar.partb >> Images.tar
+  cat Images.tar.partc >> Images.tar
+  cat Images.tar.partd >> Images.tar
+  cat Images.tar.parte >> Images.tar
+  cat Images.tar.partf >> Images.tar
+  cat Images.tar.partg >> Images.tar
+  cat Images.tar.parth >> Images.tar
+  tar -xvf Images.tar
+
+  # Changing the old IP address.
+  echo 'TOMCAT_OLD_IP_ADDR = "http://128.110.154.165:8080"' >> ${QIK_HOME}/QIK_Web/util/constants.py
+
 else
   usage
 fi

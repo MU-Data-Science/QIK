@@ -23,15 +23,25 @@ Eg:
 cd scripts/deploy_scripts && . init.sh --home /mydata --qik /mydata/QIK
 ```
 
+To setup the demo:
+
+```
+./demo_setup.sh [--home Home] [--qik QIK_Home] [--system 120k | 15k | unsplash] [-h | --help]
+```
+Eg:
+```
+cd scripts/deploy_scripts && ./demo_setup.sh --home /mydata --qik /mydata/QIK --system 120k
+```
+
 ## To start the web engine.
 ```
-cd <QIK_HOME>/QIK_Web && python manage.py runserver <IP>:8000
+cd QIK_Web && python manage.py runserver <IP>:8000
 ```
 
 The UI can be accessed at http://\<IP\>:8000/search/image_search
 
 ## To construct the index.
-List of images can be added to `MetaDataGenerator/images.txt` or the directory containing the images can be added to `MetaDataGenerator/constants.py`
+List of images can be added to `MetaDataGenerator/images.txt` or the directory containing the images can be added to `MetaDataGenerator/constants.py` under `IMAGE_DIR`
 
 To start the indexing process:
 ```
