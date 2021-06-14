@@ -56,20 +56,35 @@ To reproduces the results, follow the steps in the [README](QIK_Evaluation/READM
 The scripts were tested on Ubuntu 16.04. If you would need assistance in setting up the system or if you have any other concerns, feel free to email [Arun Zachariah](mailto:azachariah@mail.missouri.edu) and [Praveen Rao](mailto:praveen.rao@missouri.edu). You can also report any issues [here](https://github.com/MU-Data-Science/QIK/issues).
 
 ## To cite using BibTeX
-If you use QIK's code for your research, please cite our publication as below:
+If you use QIK's code for your research, please cite our publications as below:
 ```
-@inproceedings{QIK_ICMR_2020,
-author = {Zachariah, Arun and Gharibi, Mohamed and Rao, Praveen},
-title = {QIK: A System for Large-Scale Image Retrieval on Everyday Scenes With Common Objects},
-year = {2020},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-doi = {10.1145/3372278.3390682},
-booktitle = {Proceedings of the 2020 International Conference on Multimedia Retrieval},
-pages = {126–135},
-numpages = {10},
-location = {Dublin, Ireland},
-series = {ICMR ’20}
+@inproceedings{10.1145/3372278.3390682,
+  author = {Zachariah, Arun and Gharibi, Mohamed and Rao, Praveen},
+  title = {QIK: A System for Large-Scale Image Retrieval on Everyday Scenes With Common Objects},
+  year = {2020},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3372278.3390682},
+  booktitle = {Proceedings of the 2020 International Conference on Multimedia Retrieval},
+  pages = {126–135},
+  numpages = {10},
+  location = {Dublin, Ireland},
+  series = {ICMR ’20}
+}
+```
+```
+@inproceedings{10.1145/3444685.3446253,
+  author = {Zachariah, Arun and Gharibi, Mohamed and Rao, Praveen},
+  title = {A Large-Scale Image Retrieval System for Everyday Scenes},
+  year = {2021},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3444685.3446253},
+  booktitle = {Proceedings of the 2nd ACM International Conference on Multimedia in Asia},
+  articleno = {72},
+  numpages = {3},
+  location = {Virtual Event, Singapore},
+  series = {MMAsia '20}
 }
 ```
 
