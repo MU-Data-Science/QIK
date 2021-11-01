@@ -202,7 +202,6 @@ def qik_search(query_image, ranking_func=None, obj_det_enabled=False, pure_objec
     print("Arun :: fetch_count :: ", fetch_count)
 
     if sortedCaptionRanksDict and fetch_count is not None:
-        print("Arun :: Entering :: ")
         print("sortedCaptionRanksDict :: ", sortedCaptionRanksDict[:fetch_count])
         return query, sortedCaptionRanksDict[:fetch_count], similar_images
     else:
