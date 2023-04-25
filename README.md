@@ -59,6 +59,9 @@ To reproduces the results, follow the steps in the [README](QIK_Evaluation/READM
 
 The scripts were tested on Ubuntu 16.04. If you would need assistance in setting up the system or if you have any other concerns, feel free to email [Arun Zachariah](mailto:azachariah@mail.missouri.edu) and [Praveen Rao](mailto:praveen.rao@missouri.edu). You can also report any issues [here](https://github.com/MU-Data-Science/QIK/issues).
 
+## Video Retrieval
+The implementation of QIK on videos is implemented [here](https://github.com/MU-Data-Science/QIK/tree/master/QIK-Videos).
+
 ## To cite using BibTeX
 If you use QIK's code for your research, please cite our publications as below:
 ```
