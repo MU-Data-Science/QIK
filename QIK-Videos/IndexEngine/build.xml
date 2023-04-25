@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<project name="IndexEngine" default="war">
+
+	<target name="clean">
+		<delete dir="build/" />
+		<delete dir="index/" />
+	</target>
+
+	<path id="compile.classpath">
+		<fileset dir="lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<target name="init">
+		<mkdir dir="build/classes"/>
+		<mkdir dir="build/war" />
+	</target>
+
+	<target name="compile" depends="clean, init" >
+		<javac destdir="build/classes" debug="true" srcdir="src">
+			<classpath refid="compile.classpath"/>
+		</javac>
+		<copy file="log4j2.properties" todir="build/classes"/>
+	</target>
+
+	<target name="build" depends="compile">
+		<jar destfile="build/jar/IndexEngine.jar" basedir="build/classes">
+			<zipgroupfileset dir="lib">
+				<include name="**/*.jar" />
+			</zipgroupfileset>
+			<manifest>
+				<attribute name="Main-Class" value="edu.umkc.Validate.ValidatorUtil" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="war" depends="compile, build">
+		<war destfile="build/war/IndexEngine.war" needxmlfile="false">
+			<lib dir="lib"/>
+			<classes dir="build/classes"/>
+		</war>
+	</target>
+
+</project>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src='https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js'></script>
+    <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js'></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="{% static 'js/home-view.js' %}"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/home-style.css' %}" rel="stylesheet">
+</head>
+<body>
+{% load filters %}
+{% load tags %}
+
+<!--Header - Start-->
+<form id="query-form" method="post" enctype="multipart/form-data">
+    <nav class="white">
+        <div class="nav-wrapper">
+            <ul class="left">
+    		    <li><a href="{% url 'video_search' %}" class="qik-logo">QIK</a></li>
+    	    </ul>
+            <ul class="hide-on-med-and-down right">
+                <li class="active"><a href="{% url 'about' %}" class="black-text">About</a></li>
+                <li><a href="{% url 'video_search' %}" class="black-text">Search</a></li>
+                <li><a href="#" class="black-text" id="explain">Explain</a></li>
+                <li><a href="{% url 'add_index' %}" class="black-text">Index</a></li>
+                <li><a href="https://github.com/MU-Data-Science/QIK" class="black-text">Code</a></li>
+            </ul>
+	    </div>
+    </nav>
+</form>
+<!--Header End-->
+
+<div class="col s12 m6">
+    <div class="card darken-1">
+        <div class="card-content black-text">
+            <span class="card-title center font-weight-bold">QIK</span>
+            <p>QIK is a large scale image retrieval system built for exploring an image repository comprising of complex everyday scenes consisting of common objects. The system leverages many recent advances in deep learning and natural language processing for understanding a given image and to capture the relationships amongst the objects within the image which is then used for fetching all related images and suggesting any images having a similar context.</p>
+            <img id="architecture" src="{% static 'img/QIK_Arch.png' %}">
+            <p style="text-align: center; font-weight: bold;">Fig: QIK Architecture</p>
+        </div>
+        <div class="card-action center">
+            <a href="{% url 'video_search' %}" class="black-text">Explore QIK</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

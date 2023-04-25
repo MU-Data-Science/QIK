@@ -1,0 +1,171 @@
+*
+{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Open sans';
+}
+
+*:focus
+{
+	outline: none;
+}
+
+a{
+	color: #666;
+}
+
+body{
+	background: #eee;
+}
+
+#container{
+	background: #fff;
+	width: 800px;
+	padding: 30px;
+	min-height: 400px;
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	box-shadow:  1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+	overflow: auto;
+}
+
+p{
+	color: #444;
+	margin: 15px 0;
+}
+
+.scrollBox{
+	position: relative;
+	width: 400px;
+	height: 300px;
+
+	padding-right: 14px;
+	overflow: hidden;
+}
+.scrollbar{
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	
+	right: 0;
+}
+.scrollDragger{
+	position: absolute;
+	background: #ccc;
+	width: 6px;
+	height: 30px;
+
+	cursor: pointer;
+	margin-left: -1px;
+	z-index: 2;
+}
+.scrollRail{
+	position: absolute;
+	background: #eee;
+	width: 4px;
+	height: 100%;
+	z-index: 1;
+}
+
+ul{
+	list-style: none;
+	margin: 0px;
+}
+
+.fadein{
+	display: block;
+	float: left;
+	margin-bottom: 15px;
+	color: #fff;
+	font: 40px Edmondsans;
+	text-align: center;
+	padding: 75px 0px;
+	width: 100%;
+	height: 50px;
+	background: #35c52e; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzNWM1MmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGI5ODMwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-radial-gradient(center, ellipse cover,  #35c52e 0%, #0b9830 100%); /* FF3.6+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #35c52e 0%,#0b9830 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #35c52e 0%,#0b9830 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #35c52e 0%,#0b9830 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #35c52e 0%,#0b9830 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c52e', endColorstr='#0b9830',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+#flux_carousel li{
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	width: 145px;
+	height: 145px;
+	background: #35c52e; /* Old browsers */
+}
+#flux_carousel ul:nth-child(2n+2) li{
+	background: #ccc;
+}
+
+.tab{
+	background: #108de4;
+	padding: 20px;
+	color: #eee;
+	border-radius: 5px;
+}
+
+/* Carousel Placement Elements */
+#perspective {
+  margin: 0 auto;
+/*   margin-top: 80px; */
+  margin-left: 400px;
+  width: 510px;
+  height: 140px;
+  position: relative;
+  -webkit-perspective: 1100px;
+  perspective: 1100px;
+}
+
+#carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg) translateZ(-288px);
+}
+
+#carousel figure {
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 350px;
+/*   opacity: 0.6; */
+  margin: 12px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  -moz-transition: opacity 1s, -moz-transform 1s;
+  -o-transition: opacity 1s, -o-transform 1s;
+  transition: opacity 1s, transform 1s;
+}
+
+/* Card Design Elements */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}

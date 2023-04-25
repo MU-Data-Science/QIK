@@ -1,0 +1,8 @@
+Dataset
+-------
+sudo apt-get install -y unrar-free
+mkdir /mydata/HMDB51 && cd /mydata/HMDB51 && wget http://serre-lab.clps.brown.edu/wp-content/uploads/2013/10/hmdb51_org.rar && unrar e hmdb51_org.rar && rm -rvf hmdb51_org.rar
+for file in *.rar; do unrar e "$file"; done
+rm -rvf *.rar
+mkdir /mydata/HMDB51_Metadata && cd /mydata/HMDB51_Metadata && wget http://serre-lab.clps.brown.edu/wp-content/uploads/2013/10/test_train_splits.rar && unrar e test_train_splits.rar && rm -rvf test_train_splits.rar
+rm -rvf *3.txt && rm -rvf *2.txt

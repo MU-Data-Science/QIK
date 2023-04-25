@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src='https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js'></script>
+    <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js'></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="{% static 'js/home-view.js' %}"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/explain-style.css' %}" rel="stylesheet">
+</head>
+<body>
+{% load filters %}
+{% load tags %}
+
+<!--Header - Start-->
+<nav class="white">
+    <div class="nav-wrapper">
+        <ul class="left">
+            <li><a href="{% url 'video_search' %}" class="qik-logo">QIK</a></li>
+        </ul>
+        <ul class="hide-on-med-and-down right">
+            <li><a href="{% url 'about' %}" class="black-text">About</a></li>
+            <li><a href="{% url 'video_search' %}" class="black-text">Search</a></li>
+            <li class="active"><a href="#" class="black-text" >Explain</a></li>
+            <li><a href="{% url 'add_index' %}" class="black-text">Index</a></li>
+            <li><a href="https://github.com/MU-Data-Science/QIK" class="black-text">Code</a></li>
+        </ul>
+    </div>
+</nav>
+<!--Header End-->
+
+<form id="search-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <!--Hidden Summary-->
+    <div id="summary" style="visibility: hidden; height: 0px">
+        <p id="query_exec_time">{{query_exec_time}}</p>
+        <p id="ranking_time">{{ranking_time}}</p>
+        <p id="qik_exec_time">{{qik_exec_time}}</p>
+        <p id="similar_exec_time">{{similar_exec_time}}</p>
+        <iframe style="display:none" onload="loadSummary()" src="#"></iframe>
+    </div>
+
+    <div class="content-box">
+        <img src="{{ query_image_path }}">
+        <p>Query Image</p>
+    </div>
+
+    <div class="arrow">
+        <img src="{% static 'img/bottom_arrow.png' %}">
+    </div>
+
+    <div class="content-box">
+        <div class="content-inner-box">
+            <div class="content">
+                <h4>{{ img_caption }}</h4>
+            </div>
+        </div>
+        <p>Caption Generated</p>
+    </div>
+
+    <div class="arrow">
+        <img src="{% static 'img/bottom_arrow.png' %}">
+    </div>
+
+    <div class="content-box">
+        <img src="{{ parse_tree_img }}">
+        <p>Parse Tree Representation</p>
+    </div>
+
+    <div class="arrow">
+        <img src="{% static 'img/bottom_arrow.png' %}">
+    </div>
+
+    <div class="content-box">
+        <div class="content-xpath-box">
+            <div class="content">
+                <p>{{ xpath }}</p>
+            </div>
+        </div>
+        <p>Basic XPath Query</p>
+    </div>
+
+    <div class="arrow">
+        <img src="{% static 'img/bottom_arrow.png' %}">
+    </div>
+
+    <div class="content-box">
+        <div class="content-xpath-box">
+            <div class="content">
+                <p>{{ optimized_xPath }}</p>
+            </div>
+        </div>
+        <p>Optimized XPath Query</p>
+    </div>
+
+    <div class="arrow">
+        <img src="{% static 'img/bottom_arrow.png' %}">
+    </div>
+
+    <div class="content-box">
+        <div class="content-xpath-box">
+            <div class="content">
+                {% for xp in similar_xpath %}
+                    <p>&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;{{ xp }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <p>Similar XPath Queries</p>
+    </div>
+
+</form>
+
+<!--Loading - Start-->
+<div class="loading-wrapper">
+ <div class="progress">
+      <div class="indeterminate" ></div>
+  </div>
+</div>
+<!--Loading - End-->
+<script>
+    function loadSummary() {
+	    var query_exec_time = $('#query_exec_time').text()
+        var ranking_time = $('#ranking_time').text()
+        var qik_exec_time = $('#qik_exec_time').text()
+        var similar_exec_time = $('#similar_exec_time').text()
+
+        var summary_message = "Overall QIK execution time: " + qik_exec_time + " seconds \n" +
+        "Time taken for obtaining similar images: " + similar_exec_time + " seconds"
+
+        alert(summary_message)
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+Note:
+-----
+In this directory, we conduct the evaluation by replicating the setup described in CSQ (https://openaccess.thecvf.com/content_CVPR_2020/papers/Yuan_Central_Similarity_Quantization_for_Efficient_Image_and_Video_Retrieval_CVPR_2020_paper.pdf)
+i.e. Training Videos/Videos to retrieve: Split 1.
+Evaluation Videos: Split 1.
+
+Conda Setup
+-----------
+cd /mydata && wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
+bash Anaconda3-2019.03-Linux-x86_64.sh -b -p /mydata/anaconda3
+
+# Setup Conda path.
+echo 'export PATH=/mydata/anaconda3/bin:$PATH' >> /users/arung/.profile && . /users/arung/.profile
+
+# Initialize Conda
+conda init
+
+Dataset
+-------
+sudo apt-get install -y unrar-free
+mkdir /mydata/UCF101 && cd /mydata/UCF101 && wget --no-check-certificate https://www.crcv.ucf.edu/data/UCF101/UCF101.rar && unrar e UCF101.rar && rm -rvf UCF101.rar
+
+CSQ
+---
+mkdir /mydata/CSQ && mkdir /mydata/CSQ/Video_Retrieval && cd /mydata/CSQ
+cd /mydata/CSQ && git clone https://github.com/yuanli2333/Hadamard-Matrix-for-hashing.git
+conda create -y --name csq_env python=3.6
+conda activate csq_env
+pip install torch==0.4.1
+conda install pytorch=0.4.1 torchvision -c pytorch
+pip install opencv-python
+sudo apt-get update
+sudo apt-get install ffmpeg libsm6 libxext6 -y
+scp ../MSR_VTT/64bit_87.38_PyTorch-MFNet-master.pth arung@<IP>:/mydata/CSQ/Video_Retrieval
+scp pretrained/MFNet2D_ImageNet1k-0000.pth arung@<IP>:/mydata/CSQ/Hadamard-Matrix-for-hashing/video/network/pretrained # In case of image retrieval
+
+DnS
+---
+mkdir /mydata/DnS && mkdir /mydata/DnS/Video_Retrieval && mkdir /mydata/Hollywood2_Feature_Data
+cd /mydata/DnS && git clone https://github.com/mever-team/distill-and-select.git
+conda create -y --name dns_env python=3.6
+conda activate dns_env
+pip install torch==1.10.0+cpu torchvision==0.11.1+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
+cd /mydata/DnS/distill-and-select && pip install -r requirements.txt
+scp eval_dns.py hollywood2_groundtruth.pickle arung@130.127.133.133:/mydata/DnS/Video_Retrieval

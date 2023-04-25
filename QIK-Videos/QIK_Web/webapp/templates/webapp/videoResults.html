@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.js"> </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script src='https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js'></script>
+    <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js'></script>
+    <script src="{% static 'js/material-view.js' %}"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <link href="{% static 'css/material-style.css' %}" rel="stylesheet">
+</head>
+<body>
+{% load filters %}
+{% load tags %}
+
+<!--Header - Start-->
+<form id="query-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <nav class="white">
+        <div class="nav-wrapper">
+    	    <ul class="left">
+    		    <li><a href="{% url 'video_search' %}" class="qik-logo">QIK</a></li>
+    	    </ul>
+    	    <ul class="hide-on-med-and-down left">
+                <li style="margin-left:20px">
+                    <a class="modal-trigger waves-effect waves-light" href="#settingsModal"><i class="black-text material-icons prefix">settings</i></a>
+                    <div id="settingsModal" class="modal modal-fixed-footer" style="width: 50%;">
+                        <div class="modal-content" style="color: black">
+                            <h4 style="font-size: 1.5rem; font-family: 'Montserrat';">Advanced Search Settings</h4>
+                            <table class="striped">
+                                <tr>
+                                    <td>Search Model:</td>
+                                    <td><div class="input-field col s12">{{ form.search_models }}</div></td>
+                                </tr>
+                                <tr>
+                                    <td>Image Count:</td>
+                                    <td><div class="input-field col s12">{{ form.k_value }}</div></td>
+                                </tr>
+                                <tr>
+                                    <td>Ranking Scheme: </td>
+                                    <td><div class="input-field col s12">{{ form.ranking_function }}</div></td>
+		                        </tr>
+	                        </table>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Update</a>
+                        </div>
+                    </div>
+                </li>
+			    <li style="margin-left:-20px">
+                    <div class="center row">
+                        <div class="col s12">
+                            <div class="row" id="topbarsearch" style="width: 600px">
+                                <div id = "searchDisplay">
+                                    <div class="file-field col s6 s12 black-text">
+                                        <input class="file-path" type="text" placeholder="Upload a video to start searching">{{ form.videoFile }}</input>
+                                    </div>
+                                    <a href="#" id="search"><i class="black-text material-icons prefix">search</i></a>
+                                </div>
+                                <div id = "chipDisplay">
+                                    <div class="file-field col s6 s12 black-text search-line">
+                                        <div class="chip" style="">
+                                            <img src="{{ imgSrc }}">{{ caption }}
+                                            <i id="closeTag" class="close material-icons">close</i>
+                                        </div>
+                                    </div>
+                                    <a id="searchNone" class="link"><i class="black-text material-icons prefix">search</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+			    </li>
+    	    </ul>
+            <ul class="hide-on-med-and-down right">
+                <li><a href="{% url 'about' %}" class="black-text">About</a></li>
+                <li class="active"><a href="{% url 'video_search' %}" class="black-text">Search</a></li>
+                <li><a id="explain" href="{% url 'explain_query' %}" class="black-text">Explain</a></li>
+                <li><a href="{% url 'add_index' %}" class="black-text">Index</a></li>
+                <li><a href="https://github.com/MU-Data-Science/QIK" class="black-text">Code</a></li>
+            </ul>
+	    </div>
+    </nav>
+</form>
+<!--Header End-->
+<div class="top-accordion-wrapper">
+    <div class="top-accordion">
+        <!--Query Image - Start-->
+        <div class="query-image">
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header center"><icon class="material-icons tab-icon">image</icon>Query Image</div>
+                </li>
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="{{ imgSrc }}" style="height:200px">
+                            </div>
+                            <div class="card-content">
+                                <p>{{ caption }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <!--Query Image - End-->
+
+        <!--Similar Images - Start-->
+        <div class="similar-images">
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header center"><icon class="material-icons tab-icon">video_search</icon>Similar Image Queries</div>
+                </li>
+                <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="1000" style="width: 100%">
+                    <div class="MultiCarousel-inner">
+                        {% for link, caption in similarImages.items %}
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-image">
+                                                <img src="{{ link }}" style="height:200px">
+                                                <a href="{% get_query link rankingFunc kValue searchModel%}" class="btn-floating halfway-fab waves-effect waves-light red sim-search"><i class="material-icons">search</i></a>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>{{ caption }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <a class="btn-floating waves-effect waves-light blue leftLst"><i class="material-icons">keyboard_arrow_left</i></a>
+                    <a class="btn-floating waves-effect waves-light blue rightLst"><i class="material-icons">keyboard_arrow_right</i></a>
+                </div>
+            </ul>
+        </div>
+        <!--Similar Images - End-->
+    </div>
+</div>
+
+<!--Search Results - Start-->
+<div class="search-results">
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header center"><icon class="material-icons tab-icon">collections</icon>Search Results</div>
+        </li>
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            {% for image in images %}
+                {% with image|split as details %}
+                    <div class="grid-item">
+                        <div class="content">
+                            <div class="content-overlay"></div>
+                            <img class="content-image" src="{{ details.link }}" style="height: 400px">
+                            <div class="content-details fadeIn-bottom">
+                                <p class="content-text">{{details.caption}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endwith %}
+            {% endfor %}
+        </div>
+    </ul>
+</div>
+<!--Search Results - End-->
+
+<!--Loading - Start-->
+<div class="loading-wrapper">
+ <div class="progress">
+      <div class="indeterminate" ></div>
+  </div>
+</div>
+<!--Loading - End-->
+
+</body>
+</html>
